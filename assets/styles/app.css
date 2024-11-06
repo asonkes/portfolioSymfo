@@ -10,21 +10,11 @@ body {
     background-color: red;
 }
 
-.session {
-    max-width: 100%;
-    min-height: 100vh;
-    background-color: orange;
+.session, .home {
+    min-height: calc(100vh - 104px);
 }
 
-header {
-    max-width: 100%;
-    height: 100px;
-    background-color: blue;
-}
-
-footer {
-    max-width: 100%;
-    height: 50px;
-    background-color: green;
+.home {
+    background-image: url('../../public/images/background/banniere-abstraite-conception-vagues-qui-coule-arc-ciel_1048-14398.webp');
 }
 
