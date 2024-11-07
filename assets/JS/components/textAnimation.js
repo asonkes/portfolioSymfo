@@ -1,4 +1,4 @@
-const dynamicText = document.querySelector('.dynamic-text');
+const dynamicText = document.getElementById('dynamic-text');
 const texts = ["Web Developer", "Strong Woman", "Motivated Junior", "Web Developper"];
 let currentTextIndex = 0; // Index du mot
 let charIndex = 0; // Index de la lettre dans le mot

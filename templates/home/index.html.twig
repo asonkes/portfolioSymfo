@@ -1,15 +1,28 @@
 {% extends "base.html.twig" %}
 
 {% block body %}
-	<div class="session max-w-full font-family">
-		<div class="home max-w-full h-full bg-no-repeat bg-center bg-cover flex flex-col justify-evenly items-center">
-			<div>
-				<h1 class="-mt-16 text-center text-white text-5xl tracking-wider">Hello I'm Audrey</h1>
+	<div class="max-w-full font-family" id="session">
+		<div class="snip1573 max-w-full h-full flex" id="home">
+			<div class="w-6/12 bg-black" id="home-left"></div>
+			<div class="w-6/12 relative" id="home-right"></div>
+
+			<div id="triangleTwo-transparent">
+				<div class="figcationText">
+					<a href="#">View my works</a>
+				</div>
 			</div>
-			<div class="inline-flex">
-				<span class="static-text text-rose text-6xl tracking-wider">I'm a</span>
-				<span class="dynamic-text text-indigo text-6xl tracking-wider"></span>
+
+			<div id="triangle"></div>
+			<div id="triangleTwo">
+				<img src="{{ asset('images/images/Polygon-1.png')}}" alt="Image représentant le visage de la web Développeuse">
 			</div>
 		</div>
+
+		<div class="absolute top-3/4 left-1/3 inline-flex">
+			<span class="static-text text-xxl text-rose tracking-wider">I'm a</span>
+			<span class="text-indigo text-xxl tracking-wider" id="dynamic-text"></span>
+		</div>
+
+		<div class="figcaption"></div>
 	</div>
 {% endblock %}

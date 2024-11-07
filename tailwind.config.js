@@ -11,7 +11,11 @@ module.exports = {
     fontFamily: {
       family: 'Homenaje, sans-serif'
     },
+    fontSize: {
+      xxl: '5.25rem'
+    },
     colors: {
+      black: '#000000',
       white: '#ffffff',
       indigo: '#6461f2',
       rose: '#e796f7'

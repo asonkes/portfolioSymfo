@@ -1,0 +1,16 @@
+/* Permet d'avoir le background en opacity */
+#home-right::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: block;
+    position: absolute;
+    background-image: url('../../../../../public/images/background/splash-gouttes-eau_23-21478283951.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 15%;
+}
+

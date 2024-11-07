@@ -1,0 +1,50 @@
+#triangle {
+    position: absolute;
+    top: 15%;
+    left: 40%;
+    background-color: #6461f2;
+    transform: rotate(-90deg) skewX(-30deg) scale(1, .866);
+    z-index: 10;
+}
+
+#triangle::before,
+#triangle::after {
+    content: '';
+    position: absolute;
+    background-color: inherit;
+}
+
+#triangle,
+#triangle::before,
+#triangle::after {
+    width: 280px;
+    height: 280px;
+    border-top-right-radius: 20%;
+}
+
+#triangle::before {
+    transform: rotate(-135deg) skewX(-45deg) scale(1.414, .707) translate(0, -50%);
+}
+
+#triangle::after,
+#triangleTwo::after {
+    transform: rotate(135deg) skewY(-45deg) scale(.707, 1.414) translate(50%);
+}
+
+#triangleTwo {
+    top: 13.5%;
+    left: 41.5%;
+    position: absolute;
+    z-index: 11;
+    background-repeat: no-repeat;
+}
+
+#triangleTwo-transparent {
+    width: 450px;
+    height: 450px;
+    top: 15%;
+    left: 40%;
+    position: absolute;
+    z-index: 44;
+}
+
