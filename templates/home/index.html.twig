@@ -1,9 +1,15 @@
 {% extends "base.html.twig" %}
 
 {% block body %}
-	<div class="session max-w-full">
-		<div class="home max-w-full h-full bg-no-repeat bg-contain">
-			<h1 class="text-3xl font-bold underline purple">Page d'accueil</h1>
+	<div class="session max-w-full font-family">
+		<div class="home max-w-full h-full bg-no-repeat bg-center bg-cover flex flex-col justify-evenly items-center">
+			<div>
+				<h1 class="-mt-16 text-center text-white text-5xl tracking-wider">Hello I'm Audrey</h1>
+			</div>
+			<div class="inline-flex">
+				<span class="static-text text-rose text-6xl tracking-wider">I'm a</span>
+				<span class="dynamic-text text-indigo text-6xl tracking-wider"></span>
+			</div>
 		</div>
 	</div>
 {% endblock %}

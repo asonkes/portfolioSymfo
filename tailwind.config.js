@@ -13,7 +13,8 @@ module.exports = {
     },
     colors: {
       white: '#ffffff',
-      indigo: '#6461f2'
+      indigo: '#6461f2',
+      rose: '#e796f7'
     },
     extend: {},
   },
