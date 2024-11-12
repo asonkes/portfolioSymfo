@@ -1,0 +1,151 @@
+@use '../../../mixins/mixins.scss';
+
+#triangle {
+    position: absolute;
+    top: 15%;
+    left: 35%;
+    background-color: #6461f2;
+    transform: rotate(-90deg) skewX(-30deg) scale(1, .866);
+    z-index: 10;
+
+    @include mixins.lg-md {
+        left: 30%;
+    }
+
+    @include mixins.md {
+        left: 25%;
+    }
+
+    @include mixins.s {
+        left: 22%;
+    }
+
+    @include mixins.xs {
+        left: 14%;
+    }
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        background-color: inherit;
+    }
+
+    &:before {
+        transform: rotate(-135deg) skewX(-45deg) scale(1.414, .707) translate(0, -50%);
+    }
+
+    &:after {
+        transform: rotate(135deg) skewY(-45deg) scale(.707, 1.414) translate(50%);
+    }
+}
+
+#triangle,
+#triangle::before,
+#triangle::after {
+    width: 280px;
+    height: 280px;
+    border-top-right-radius: 20%;
+
+    @include mixins.xxl-big {
+        width: 250px;
+        height: 250px;
+    }
+
+    @include mixins.xxl-lg {
+        width: 230px;
+        height: 230px;
+    }
+
+    @include mixins.xxl-md {
+        width: 220px;
+        height: 220px;
+    }
+
+    @include mixins.lg-md {
+        width: 210px;
+        height: 210px;
+    }
+
+    @include mixins.md {
+        width: 200px;
+        height: 200px;
+    }
+
+    @include mixins.s {
+        width: 170px;
+        height: 170px;
+    }
+
+    @include mixins.xs {
+        width: 155px;
+        height: 155px;
+    }
+}
+
+#triangleTwo {
+    top: 13.5%;
+    left: 36.5%;
+    position: absolute;
+    z-index: 11;
+    background-repeat: no-repeat;
+
+    @include mixins.lg-md {
+        left: 32%;
+    }
+
+    @include mixins.md {
+        top: 14%;
+        left: 27.5%;
+    }
+
+    @include mixins.s {
+        left: 24.5%;
+    }
+
+    @include mixins.xs {
+        left: 18%;
+    }
+
+    .triangleTwo--img {
+        max-width: 100%;
+        height: auto;
+
+        @include mixins.xxl-big {
+            max-width: 87%;
+        }
+
+        @include mixins.xxl-lg {
+            max-width: 80%;
+        }
+
+        @include mixins.xxl-md {
+            max-width: 77%;
+        }
+
+        @include mixins.lg-md {
+            max-width: 337px;
+        }
+
+        @include mixins.md {
+            max-width: 325px;
+        }
+
+        @include mixins.s {
+            max-width: 279px;
+        }
+
+        @include mixins.xs {
+            max-width: 250px;
+        }
+    }
+}
+
+#triangleTwo-transparent {
+    width: 450px;
+    height: 450px;
+    top: 15%;
+    left: 40%;
+    position: absolute;
+    z-index: 44;
+}

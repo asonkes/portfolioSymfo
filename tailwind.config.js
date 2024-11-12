@@ -12,7 +12,9 @@ module.exports = {
       family: 'Homenaje, sans-serif'
     },
     fontSize: {
-      xxl: '5.25rem'
+      xxxl: '60px',
+      xxl: '55px',
+      md: '50px',
     },
     colors: {
       black: '#000000',
@@ -20,7 +22,19 @@ module.exports = {
       indigo: '#6461f2',
       rose: '#e796f7'
     },
-    extend: {},
+    screens: {
+      'max-md': {'max': '600px'},
+      'max-s': {'max': '500px'},
+    },
+    extend: {
+      spacing: {
+        38: '38%',
+        80: '80%',
+      },
+      zIndex: {
+        big: '99999999',
+      },
+    },
   },
   plugins: [],
 }

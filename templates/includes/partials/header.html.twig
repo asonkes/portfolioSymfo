@@ -1,17 +1,17 @@
-<header class="max-w-full h-16 bg-indigo font-family text-white">
+<header class="relative z-big max-w-full h-16 bg-indigo font-family text-white">
 	<nav class="list-none h-16">
 		<ul class="h-16 flex justify-center items-center">
 			<li class="w-32 text-xl tracking-widest">
 				<a href="{{ path('home')}}">Accueil</a>
 			</li>
 			<li class="w-32 text-xl tracking-widest">
-				<a href="#">About</a>
+				<a href="{{ path('home')}}#about">About</a>
 			</li>
 			<li class="w-32 text-xl tracking-widest">
-				<a href="#">Projects</a>
+				<a href="{{ path('home')}}#works">Projects</a>
 			</li>
 			<li class="w-32 text-xl tracking-widest">
-				<a href="#">Contact</a>
+				<a href="{{ path('home')}}#contact">Contact</a>
 			</li>
 		</ul>
 	</nav>

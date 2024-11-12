@@ -2,27 +2,60 @@
 
 {% block body %}
 	<div class="max-w-full font-family" id="session">
-		<div class="snip1573 max-w-full h-full flex" id="home">
+		<div class="relative snip1573 max-w-full flex" id="home">
 			<div class="w-6/12 bg-black" id="home-left"></div>
 			<div class="w-6/12 relative" id="home-right"></div>
 
 			<div id="triangleTwo-transparent">
 				<div class="figcationText">
-					<a href="#">View my works</a>
+					<a href="{{ path('home')}}#works">View my works</a>
 				</div>
 			</div>
 
 			<div id="triangle"></div>
 			<div id="triangleTwo">
-				<img src="{{ asset('images/images/Polygon-1.png')}}" alt="Image représentant le visage de la web Développeuse">
+				<img class="triangleTwo--img" src="{{ asset('images/images/Polygon-1.png')}}" alt="Image représentant le visage de la web Développeuse">
 			</div>
 		</div>
 
-		<div class="absolute top-3/4 left-1/3 inline-flex">
-			<span class="static-text text-xxl text-rose tracking-wider">I'm a</span>
-			<span class="text-indigo text-xxl tracking-wider" id="dynamic-text"></span>
+		<div class="relative flex justify-center h-auto -top-40 max-md:-top-48 max-s:-top-64">
+			<div class="absolute inline-flex max-s:flex max-s:flex-col">
+				<span class="static-text text-xxxl text-rose tracking-wider max-md:text-xxl max-s:text-md max-s:text-center">I'm a</span>
+				<span class="text-indigo text-xxxl tracking-wider max-md:text-xxl max-s:text-md" id="dynamic-text"></span>
+			</div>
 		</div>
 
 		<div class="figcaption"></div>
+	</div>
+
+	<div class="max-w-full h-screen bg-black font-family" id="about">
+		<div class="h-full flex">
+			<div class="w-6/12 border-4 border-rose" id="about-left">
+				<h2 class="text-white text-md p-7 tracking-wider">Works</h2>
+
+				<div class="text-rose">
+					<p class="text-indigo">"</p>
+					<p>En pleine reconversion professionnelle,</p>
+					<p>Je me suis lancée dans l'informatique après</p>
+					<p>une quinzaine d'années en tant que fleuriste.</p>
+					<p>Une prise de risque ??? OUI !!!</p>
+					<p>Je n'avais pas beaucoup de connaissances dans le domaine,</p>
+					<p>et le pari a été gagnant !!!</p>
+					<p>Me voilà avec mon diplôme et une distinction dans la poche après 2 ans...</p>
+					<p>Il fallait juste y croire et s'accrocher !!!</p>
+					<p class="text-indigo">"</p>
+				</div>
+
+			</div>
+			<div class="w-6/12 border-4 border-white" id="about-right"></div>
+		</div>
+	</div>
+
+	<div class="max-w-full h-screen font-family" id="works">
+		<h2 class="text-white text-md p-7 tracking-wider">Works</h2>
+	</div>
+
+	<div class="max-w-full h-screen font-family" id="contact">
+		<h2 class="text-white text-md p-7 tracking-wider">Contact</h2>
 	</div>
 {% endblock %}

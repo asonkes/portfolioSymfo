@@ -1,0 +1,14 @@
+/* import du fichier de base de la css" */
+@use './base';
+
+/* import des mixins */
+@use './mixins/mixins.scss';
+
+/* import des fichiers liés à la page "home" */
+@use './session/home/backgroundImage/home.scss';
+@use './session/home/textAnimation/textAnimation.scss';
+@use './session/home/triangle/triangle.scss';
+@use './session/home/windowAnimation/windowAnimation.scss';
+
+/* import des fichiers liés à la page "about" */
+@use './session/about/backgroundImage/about.scss';

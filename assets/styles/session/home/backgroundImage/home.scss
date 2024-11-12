@@ -1,3 +1,5 @@
+@use '../../../mixins/mixins.scss';
+
 /* Permet d'avoir le background en opacity */
 #home-right::after {
     content: "";
@@ -13,4 +15,3 @@
     background-size: cover;
     opacity: 15%;
 }
-

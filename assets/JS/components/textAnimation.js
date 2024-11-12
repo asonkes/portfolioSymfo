@@ -1,4 +1,6 @@
-const dynamicText = document.getElementById('dynamic-text');
+document.addEventListener('DOMContentLoaded', () => {
+
+    const dynamicText = document.getElementById('dynamic-text');
 const texts = ["Web Developer", "Strong Woman", "Motivated Junior", "Web Developper"];
 let currentTextIndex = 0; // Index du mot
 let charIndex = 0; // Index de la lettre dans le mot
@@ -36,3 +38,6 @@ function deleteText() {
 
 // Lancer l'animation après un court délai
 setTimeout(typewriter, 500);
+
+})
+
