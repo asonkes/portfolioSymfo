@@ -1,5 +1,6 @@
 /* import du fichier de base de la css" */
 @use './base';
+@use '../../node_modules/normalize.css/normalize.css';
 
 /* import des mixins */
 @use './mixins/mixins.scss';
