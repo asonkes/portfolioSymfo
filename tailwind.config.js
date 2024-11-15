@@ -12,24 +12,46 @@ module.exports = {
       family: 'Homenaje, sans-serif'
     },
     fontSize: {
-      xxxl: '60px',
-      xxl: '55px',
-      md: '50px',
+      16: '16px',
+      17: '17px',
+      18: '18px',
+      20: '20px',
+      35: '35px',
+      50: '50px',
+      55: '55px',
+      60: '60px',
     },
     colors: {
       black: '#000000',
       white: '#ffffff',
       indigo: '#6461f2',
-      rose: '#e796f7'
+      indigoSpecial: 'rgba(100, 97, 242, 0.5)',
+      rose: '#e796f7',
+      red: '#FF0000'
     },
     screens: {
+      'max-xxlLG': {'max': '1300px'},
+      'max-xxlMD': {'max': '1100px'},
+      'max-lgBIG': {'max': '992px'},
+      'max-lgMD': {'max': '800px'},
       'max-md': {'max': '600px'},
+      'max-mdBIG': {'max': '650px'},
+      'min-mdBIG': {'min': '650px'},
       'max-s': {'max': '500px'},
+      'max-sBIG': {'max': '450px'},
+      'max-xs': {'max': '400px'},
     },
     extend: {
-      spacing: {
-        38: '38%',
-        80: '80%',
+      width: {
+        '40': '40%',
+        '55': '55%',
+        '60': '60%',
+        '65': '65%',
+        '70': '70%',
+        '80': '80%',
+      },
+      margin: {
+        xs : '5px',
       },
       zIndex: {
         big: '99999999',

@@ -4,6 +4,9 @@
 /* import des mixins */
 @use './mixins/mixins.scss';
 
+/* import des fichiers pour le menu "burger" */
+@use './partials/burger/burger.scss';
+
 /* import des fichiers liés à la page "home" */
 @use './session/home/backgroundImage/home.scss';
 @use './session/home/textAnimation/textAnimation.scss';

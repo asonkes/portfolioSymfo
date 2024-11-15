@@ -1,0 +1,52 @@
+#burgerLine {
+    top: 50%;
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        height: 4px;
+        width: 48px;
+        left: 0;
+        border-radius: 12px;
+        top: -10px;
+        background-color: black;
+
+        &.active {
+            display: block;
+        }
+    }
+
+    &:before {
+        top: -10px;
+    }
+
+    &:after {
+        top: 10px;
+    }
+
+    &.active {
+        background-color: transparent;
+
+        &:before {
+            top: 0;
+            transform: rotate(45deg);
+            transition: transform ease-in-out 0.5s;
+        }
+
+        &:after {
+            top: 0;
+            transform: rotate(-45deg);
+            transition: transform ease-in-out 0.5s;
+        }
+    }
+}
+
+#burgerUl {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+}

@@ -1,18 +1,40 @@
-<header class="relative z-big max-w-full h-16 bg-indigo font-family text-white">
-	<nav class="list-none h-16">
+<header class="fixed top-0 z-big w-full flex justify-center h-16 bg-indigo font-family text-white max-mdBIG:hidden">
+	<nav class="w-full list-none bg-indigo h-16">
 		<ul class="h-16 flex justify-center items-center">
-			<li class="w-32 text-xl tracking-widest">
+			<li class="w-32 text-xl text-center tracking-widest">
 				<a href="{{ path('home')}}">Accueil</a>
 			</li>
-			<li class="w-32 text-xl tracking-widest">
+			<li class="w-32 text-xl text-center tracking-widest">
 				<a href="{{ path('home')}}#about">About</a>
 			</li>
-			<li class="w-32 text-xl tracking-widest">
+			<li class="w-32 text-xl text-center tracking-widest">
 				<a href="{{ path('home')}}#works">Projects</a>
 			</li>
-			<li class="w-32 text-xl tracking-widest">
+			<li class="w-32 text-xl text-center tracking-widest">
 				<a href="{{ path('home')}}#contact">Contact</a>
 			</li>
 		</ul>
 	</nav>
 </header>
+
+<div class="fixed top-0 z-big w-full h-16 bg-indigo font-family text-white min-mdBIG:hidden" id="burger">
+	<nav class="relative w-full h-80" id="burgerNav">
+		<div class="relative w-14 h-16 left-3.5 cursor-pointer" id="burgerIcon">
+			<div class="absolute block h-1 w-12 left-0 bg-black rounded-xl" id="burgerLine"></div>
+		</div>
+		<ul class="absolute w-full top-16 text-center bg-indigoSpecial" id="burgerUl">
+			<li class="h-16 text-20">
+				<a class="w-full h-full block flex justify-center items-center" href="{{ path('home')}}">Accueil</a>
+			</li>
+			<li class="h-16 text-20">
+				<a class="w-full h-full block flex justify-center items-center" href="{{ path('home')}}#about">About</a>
+			</li>
+			<li class="h-16 text-20">
+				<a class="w-full h-full block flex justify-center items-center" href="{{ path('home')}}#works">Works</a>
+			</li>
+			<li class="h-16 text-20">
+				<a class="w-full h-full block flex justify-center items-center" href="{{ path('home')}}#contact">Contact</a>
+			</li>
+		</ul>
+	</nav>
+</div>

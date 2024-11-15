@@ -1,0 +1,20 @@
+#movingText {
+    &.active {
+        position: relative;
+        left: 0;
+        opacity: 1;
+        transition: left ease 2.5s, opacity ease 5.5s;
+    }
+}
+
+.progressBar {
+    width: 0%;
+    opacity: 0;
+    animation: progress 3s ease-in-out forwards;
+
+    &.active {
+        width: var(--progress-width);
+        opacity: 1;
+        transition: width ease 2.5s, opacity ease 2.5s;
+    }
+}

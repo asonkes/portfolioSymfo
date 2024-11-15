@@ -1,7 +1,13 @@
 import '../styles/index.scss';
 import '../styles/tailwing.css';
 
-// JS pour animation text (page d'accueil)
-import '../JS/components/textAnimation';
-import '../JS/components/windowAnimation.js';
+//JS pour menu burger
+import '../JS/includes/burger.js';
 
+// JS pour animations (page "home")
+import '../JS/components/home/textAnimation.js';
+import '../JS/components/home/windowAnimation.js';
+
+// JS pour animations (page "about")
+import '../JS/components/about/textAnimation.js';
+import '../JS/components/about/progessBar.js';
