@@ -16,6 +16,7 @@ module.exports = {
       17: '17px',
       18: '18px',
       20: '20px',
+      22: '22px',
       35: '35px',
       50: '50px',
       55: '55px',
@@ -23,6 +24,7 @@ module.exports = {
     },
     colors: {
       black: '#000000',
+      fushia: 'rgb(188, 0, 240)',
       white: '#ffffff',
       indigo: '#6461f2',
       indigoSpecial: 'rgba(100, 97, 242, 0.5)',

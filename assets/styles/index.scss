@@ -15,4 +15,7 @@
 @use './session/home/windowAnimation/windowAnimation.scss';
 
 /* import des fichiers liés à la page "about" */
-@use './session/about/backgroundImage/about.scss';
+@use './session/about/about.scss';
+
+/* import des fichiers liés à la page "works */
+@use './session/works/works.scss';

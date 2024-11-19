@@ -28,11 +28,11 @@
 		<div class="figcaption"></div>
 	</div>
 
-	<div class="max-w-full bg-black font-family" id="about">
+	<div class="max-w-full flex flex-col bg-black font-family" id="about">
 		<h2 class="text-white text-50 p-2.5 pt-16 tracking-wider">About</h2>
 
-		<div class="flex max-mdBIG:block">
-			<div class="w-6/12 border-4 border-rose max-mdBIG:w-full" id="about-left">
+		<div class="flex grow max-mdBIG:block">
+			<div class="w-6/12 max-mdBIG:w-full" id="about-left">
 				<div class="relative max-w-full h-full flex justify-center items-center">
 					<div class="absolute -left-full text-rose text-18 text-center p-5 italic tracking-wider opacity-0 max-lgBIG:text-16" id="movingText">
 						<p>
@@ -52,94 +52,274 @@
 					</div>
 				</div>
 			</div>
-			<div class="w-6/12 border-4 border-white max-mdBIG:w-full" id="about-right">
-				<p class="text-xl p-3 text-20 text-white">Mes Compétences</p>
-				<div class="max-w-full flex justify-center text-white p-7">
-
-					<div class="w-72 h-full flex flex-col justify-center p-3 border-4 border-white max-lgBIG:w-64">
-
-						<div class="w-full p-1">
-							<p>HTML</p>
-							<div class="w-full bg-indigo rounded-xl" style="--progress-width: 90%">
-								<div class="progressBar bg-rose text-end rounded-xl p-xs">
-									<span class="progressLetter mr-2.5 tracking-wider ">90%</span>
+			<div class="w-6/12 flex flex-col max-mdBIG:w-full" id="about-right">
+				<p class="text-xl p-3 text-22 text-white">Mes Compétences</p>
+				<div class="max-w-full flex grow justify-center text-white p-7">
+					<div class="w-full h-full flex justify-center items-center">
+						<div class="w-72 h-3/4 flex flex-col justify-center p-3 border-4 border-white max-lgBIG:w-64">
+							<div class="w-full p-1">
+								<p>HTML</p>
+								<div class="w-full bg-indigo rounded-xl" style="--progress-width: 90%">
+									<div class="progressBar bg-rose text-end rounded-xl p-xs">
+										<span class="progressLetter mr-2.5 tracking-wider ">90%</span>
+									</div>
 								</div>
 							</div>
-						</div>
 
-						<div class="w-full p-1">
-							<p>CSS</p>
-							<div class="w-full bg-indigo rounded-xl" style="--progress-width: 80%">
-								<div class="progressBar bg-rose text-end rounded-xl p-xs">
-									<span class="progressLetter mr-2.5 tracking-wider">80%</span>
+							<div class="w-full p-1">
+								<p>CSS</p>
+								<div class="w-full bg-indigo rounded-xl" style="--progress-width: 80%">
+									<div class="progressBar bg-rose text-end rounded-xl p-xs">
+										<span class="progressLetter mr-2.5 tracking-wider">80%</span>
+									</div>
 								</div>
 							</div>
-						</div>
 
-						<div class="w-full p-1">
-							<p>SASS</p>
-							<div class="w-full bg-indigo rounded-xl" style="--progress-width: 70%">
-								<div class="progressBar bg-rose text-end rounded-xl p-xs">
-									<span class="progressLetter mr-2.5 tracking-wider">70%</span>
+							<div class="w-full p-1">
+								<p>SASS</p>
+								<div class="w-full bg-indigo rounded-xl" style="--progress-width: 70%">
+									<div class="progressBar bg-rose text-end rounded-xl p-xs">
+										<span class="progressLetter mr-2.5 tracking-wider">70%</span>
+									</div>
 								</div>
 							</div>
-						</div>
 
-						<div class="w-full p-1">
-							<p>MYSQL</p>
-							<div class="w-full bg-indigo rounded-xl" style="--progress-width: 80%">
-								<div class="progressBar bg-rose text-end rounded-xl p-xs">
-									<span class="progressLetter mr-2.5 tracking-wider">80%</span>
+							<div class="w-full p-1">
+								<p>MYSQL</p>
+								<div class="w-full bg-indigo rounded-xl" style="--progress-width: 80%">
+									<div class="progressBar bg-rose text-end rounded-xl p-xs">
+										<span class="progressLetter mr-2.5 tracking-wider">80%</span>
+									</div>
 								</div>
 							</div>
-						</div>
 
-						<div class="w-full p-1">
-							<p>FIGMA</p>
-							<div class="w-full bg-indigo rounded-xl" style="--progress-width: 80%">
-								<div class="progressBar bg-rose text-end rounded-xl p-xs">
-									<span class="progressLetter mr-2.5 tracking-wider">80%</span>
+							<div class="w-full p-1">
+								<p>FIGMA</p>
+								<div class="w-full bg-indigo rounded-xl" style="--progress-width: 80%">
+									<div class="progressBar bg-rose text-end rounded-xl p-xs">
+										<span class="progressLetter mr-2.5 tracking-wider">80%</span>
+									</div>
 								</div>
 							</div>
-						</div>
 
-						<div class="w-full p-1">
-							<p>Javascript</p>
-							<div class="w-full bg-indigo rounded-xl" style="--progress-width: 60%">
-								<div class="progressBar bg-rose text-end rounded-xl p-xs">
-									<span class="progressLetter mr-2.5 tracking-wider">60%</span>
+							<div class="w-full p-1">
+								<p>Javascript</p>
+								<div class="w-full bg-indigo rounded-xl" style="--progress-width: 60%">
+									<div class="progressBar bg-rose text-end rounded-xl p-xs">
+										<span class="progressLetter mr-2.5 tracking-wider">60%</span>
+									</div>
 								</div>
 							</div>
-						</div>
 
-						<div class="w-full p-1">
-							<p>PHP</p>
-							<div class="w-full bg-indigo rounded-xl" style="--progress-width: 70%">
-								<div class="progressBar bg-rose text-end rounded-xl p-xs">
-									<span class="progressLetter mr-2.5 tracking-wider">70%</span>
+							<div class="w-full p-1">
+								<p>PHP</p>
+								<div class="w-full bg-indigo rounded-xl" style="--progress-width: 70%">
+									<div class="progressBar bg-rose text-end rounded-xl p-xs">
+										<span class="progressLetter mr-2.5 tracking-wider">70%</span>
+									</div>
 								</div>
 							</div>
-						</div>
 
-						<div class="w-full p-1">
-							<p>Symfony</p>
-							<div class="w-full bg-indigo rounded-xl" style="--progress-width: 70%">
-								<div class="progressBar bg-rose text-end rounded-xl p-xs">
-									<span class="progressLetter mr-2.5 tracking-wider">70%</span>
+							<div class="w-full p-1">
+								<p>Symfony</p>
+								<div class="w-full bg-indigo rounded-xl" style="--progress-width: 70%">
+									<div class="progressBar bg-rose text-end rounded-xl p-xs">
+										<span class="progressLetter mr-2.5 tracking-wider">70%</span>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
+
+
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="max-w-full h-screen font-family" id="works">
-		<h2 class="text-white text-md p-7 tracking-wider">Works</h2>
+	<div class="max-w-full flex flex-col font-family bg-black" id="works">
+
+		<h2 class="text-white text-50 p-2.5 pt-16 tracking-wider">Works</h2>
+
+		<div class="w-full h-full flex grow justify-center pt-20">
+			<div class="relative w-4/6 h-full max-lgBIG:w-4/5" id="container">
+				<ul class="relative w-full h-full text-white">
+
+					<li class="relative z-50 w-3/6 border-4 border-white list-none rounded-2xl mb-5 p-5">
+						<h3 class="text-center text-20 text-rose">Projet TEI</h3>
+						<p class="absolute w-32 -top-14 text-center text-16 text-white p-2 rounded-2xl" id="date">Novembre 2024</p>
+						<p class="text-center text-20 text-rose">Ferme de Warelles</p>
+
+						<div class="w-full h-48 flex justify-center">
+							<img class="object-contain" src="{{ asset('images/images/fermeDeWarelles.png')}}" alt="Image représentant la couverture de la page de warelles">
+						</div>
+
+						<div class="flex text-18 text-indigo my-3 max-xxlMD:flex-col max-lgBIG:flex-row max-sBIG:flex-col">
+							<p class="mr-3.5 underline underline-offset-4 decoration-2 max-xxlMD:my-3 max-lgBIG:my-0 max-lgBIG:mr-3.5 max-sBIG:my-3">Lien site :</p>
+							<a class="buttonLink buttonLink--small text-white" href="https://fermedewarelles.audrey-sonkes.be">Visiter le site</a>
+						</div>
+
+						<div class="flex text-18 text-indigo my-3 max-xxlMD:flex-col max-lgBIG:flex-row max-sBIG:flex-col">
+							<p class="mr-3.5 underline underline-offset-4 decoration-2 max-xxlMD:my-3 max-lgBIG:my-0 max-lgBIG:mr-3.5 max-sBIG:my-3">Lien Figma(maquette) :</p>
+							<a class="buttonLink buttonLink--medium text-white" href="https://www.figma.com/design/r9p9oupFqemCvu8LSEiBkc/TEI---Octobre-2024?node-id=0-1&node-type=canvas&t=JLZ1C2jnSd4RS4Wh-0">
+								Explorer la maquette
+							</a>
+						</div>
+
+						<div class="flex text-18 text-indigo my-3 max-xxlMD:flex-col max-lgBIG:flex-row max-sBIG:flex-col">
+							<p class="mr-3.5 underline underline-offset-4 decoration-2 max-xxlMD:my-3 max-lgBIG:my-0 max-lgBIG:mr-3.5 max-sBIG:my-3">Lien Git(code) :</p>
+							<a class="buttonLink buttonLink--medium text-white" href="https://github.com/asonkes/fermeDeTiti">
+								Consulter le code
+							</a>
+						</div>
+
+						<div class="flex flex-col text-18 text-indigo my-3">
+							<p class="underline underline-offset-4 decoration-2">En savoir plus :</p>
+						</div>
+
+						<div class="absolute top-0 w-8 h-8 bg-fushia max-lgBIG:w-6 max-lgBIG:h-6 max-s:w-5 max-s:h-5" id="circle"></div>
+					</li>
+
+					<li class="relative z-50 w-3/6 border-4 border-white rounded-2xl mb-5 p-5">
+						<h3 class="text-center text-20 text-rose">Projet Fin d'étude - Juin 2024</h3>
+						<p class="absolute w-32 -top-14 text-center text-16 text-white p-2 rounded-2xl" id="date">Juin 2024</p>
+						<p class="text-center text-20 text-rose">Jacadi</p>
+
+						<div class="w-full h-48 flex justify-center">
+							<img class="object-contain" src="{{ asset('images/images/Jacadi.webp')}}" alt="Image représentant la couverture de la page de warelles">
+						</div>
+
+						<div class="flex text-18 text-indigo my-3 max-xxlMD:flex-col max-lgBIG:flex-row max-sBIG:flex-col">
+							<p class="mr-3.5 underline underline-offset-4 decoration-2 max-xxlMD:my-3 max-lgBIG:my-0 max-lgBIG:mr-3.5 max-sBIG:my-3">Lien Site :</p>
+							<a class="buttonLink buttonLink--small text-white" href="https://jacadi.audrey-sonkes.be">
+								Visiter le site
+							</a>
+						</div>
+
+						<div class="flex text-18 text-indigo my-3 max-xxlMD:flex-col max-lgBIG:flex-row max-sBIG:flex-col">
+							<p class="mr-3.5 underline underline-offset-4 decoration-2 max-xxlMD:my-3 max-lgBIG:my-0 max-lgBIG:mr-3.5 max-sBIG:my-3">Lien Figma(maquette) :</p>
+							<a class="buttonLink buttonLink--medium text-white" href="https://www.figma.com/design/w6XUCOSEukmwK0zdTs9kYm/Jacadi?node-id=0-1&node-type=canvas&t=CI1ssSLkar2WXsiG-0">
+								Explorer la maquette
+							</a>
+						</div>
+
+						<div class="flex text-18 text-indigo my-3 max-xxlMD:flex-col max-lgBIG:flex-row max-sBIG:flex-col">
+							<p class="mr-3.5 underline underline-offset-4 decoration-2 max-xxlMD:my-3 max-lgBIG:my-0 max-lgBIG:mr-3.5 max-sBIG:my-3">Lien Git(code) :</p>
+							<a class="buttonLink buttonLink--medium text-white" href="https://github.com/asonkes/JacadiExamen">
+								Consulter le code
+							</a>
+						</div>
+
+						<div class="flex flex-col text-18 text-indigo my-3">
+							<p class="mr-3.5 underline underline-offset-4 decoration-2">En savoir plus :</p>
+						</div>
+
+						<div class="absolute top-0 w-8 h-8 bg-fushia max-lgBIG:w-6 max-lgBIG:h-6 max-s:w-5 max-s:h-5" id="circle"></div>
+					</li>
+
+					<li class="relative z-50 w-3/6 border-4 border-white rounded-2xl mb-5 p-5">
+						<h3 class="text-center text-20 text-rose">Projet Fin 1ère année</h3>
+						<p class="absolute w-32 -top-14 text-center text-16 text-white p-2 rounded-2xl" id="date">Juin 2023</p>
+						<p class="text-center text-20 text-rose">LollyPop</p>
+
+						<div class="w-full h-48 flex justify-center">
+							<img class="object-contain" src="{{ asset('images/images/lollyPop.png')}}" alt="Image représentant la couverture de la page de warelles">
+						</div>
+
+						<div class="flex text-18 text-indigo my-3 max-xxlMD:flex-col max-lgBIG:flex-row max-sBIG:flex-col">
+							<p class="mr-3.5 underline underline-offset-4 decoration-2 max-xxlMD:my-3 max-lgBIG:my-0 max-lgBIG:mr-3.5 max-sBIG:my-3">Lien Site :</p>
+							<a class="buttonLink buttonLink--small text-white" href="https://lollypop.audrey-sonkes.be">
+								Visiter le site
+							</a>
+						</div>
+
+						<div class="flex text-18 text-indigo my-3 max-xxlMD:flex-col max-lgBIG:flex-row max-sBIG:flex-col">
+							<p class="mr-3.5 underline underline-offset-4 decoration-2 max-xxlMD:my-3 max-lgBIG:my-0 max-lgBIG:mr-3.5 max-sBIG:my-3">Lien Figma(maquette) :</p>
+							<a class="buttonLink buttonLink--medium text-white" href="https://www.figma.com/design/MlXQKciGyBfEEL6uZAZzW8/Projet-examen-(version-ordinateur)?node-id=0-1&node-type=canvas&t=JrvynraKgHhH0Ij7-0">
+								Explorer la maquette
+							</a>
+						</div>
+
+						<div class="flex text-18 text-indigo my-3 max-xxlMD:flex-col max-lgBIG:flex-row max-sBIG:flex-col">
+							<p class="mr-3.5 underline underline-offset-4 decoration-2 max-xxlMD:my-3 max-lgBIG:my-0 max-lgBIG:mr-3.5 max-sBIG:my-3">Lien Git(code) :</p>
+							<a class="buttonLink buttonLink--medium text-white" href="https://github.com/asonkes/projet-fin-d-annee-2023">
+								Consulter le code
+							</a>
+						</div>
+
+						<div class="flex text-18 text-indigo my-3">
+							<p class="mr-3.5 underline underline-offset-4 decoration-2">En savoir plus</p>
+						</div>
+
+						<div class="absolute top-0 w-8 h-8 bg-fushia max-lgBIG:w-6 max-lgBIG:h-6 max-s:w-5 max-s:h-5" id="circle"></div>
+					</li>
+
+					<li class="relative z-50 w-3/6 border-4 border-white rounded-2xl mb-5 p-5">
+						<h3 class="text-center text-20 text-rose">1er projet Symfony</h3>
+						<p class="absolute w-32 -top-14 text-center text-16 text-white p-2 rounded-2xl" id="date">Décembre 2023</p>
+						<p class="text-center text-20 text-rose">SpeedCare</p>
+
+						<div class="w-full h-48 flex justify-center">
+							<img class="object-contain" src="{{ asset('images/images/garage.png')}}" alt="Image représentant la couverture de la page de warelles">
+						</div>
+
+						<div class="flex text-18 text-indigo my-3 max-xxlMD:flex-col max-lgBIG:flex-row max-sBIG:flex-col">
+							<p class="mr-3.5 underline underline-offset-4 decoration-2 max-xxlMD:my-3 max-lgBIG:my-0 max-lgBIG:mr-3.5 max-sBIG:my-3">Lien Site :</p>
+							<a class="buttonLink buttonLink--small text-white" href="http://examen.audrey-sonkes.be/">
+								Visiter le site
+							</a>
+						</div>
+
+						<div class="flex text-18 text-indigo my-3 max-xxlMD:flex-col max-lgBIG:flex-row max-sBIG:flex-col">
+							<p class="mr-3.5 underline underline-offset-4 decoration-2 max-xxlMD:my-3 max-lgBIG:my-0 max-lgBIG:mr-3.5 max-sBIG:my-3">Lien Git(code) :</p>
+							<a class="buttonLink buttonLink--medium text-white" href="https://github.com/asonkes/garage">
+								Consulter le code
+							</a>
+						</div>
+
+						<div class="flex text-18 text-indigo my-3">
+							<p class="mr-3.5 underline underline-offset-4 decoration-2">En savoir plus:</p>
+						</div>
+
+						<div class="absolute top-0 left-0 w-8 h-8 bg-fushia max-lgBIG:w-6 max-lgBIG:h-6 max-s:w-5 max-s:h-5" id="circle"></div>
+					</li>
+
+					<li class="relative z-50 w-3/6 border-4 border-white rounded-2xl mb-5 p-5">
+						<h3 class="text-center text-20 text-rose">Exercice cours(code entièrement css/html)</h3>
+						<p class="absolute w-32 -top-14 text-center text-16 text-white p-2 rounded-2xl" id="date">Mars 2023</p>
+						<p class="text-center text-20 text-rose">50 Nuances de Grey</p>
+
+						<div class="w-full h-48 flex justify-center">
+							<img class="object-contain" src="{{ asset('images/images/50NuancesDeGrey.png')}}" alt="Image représentant la couverture de la page de warelles">
+						</div>
+
+						<div class="flex text-18 text-indigo my-3 max-xxlMD:flex-col max-lgBIG:flex-row max-sBIG:flex-col">
+							<p class="mr-3.5 underline underline-offset-4 decoration-2 max-xxlMD:my-3 max-lgBIG:my-0 max-lgBIG:mr-3.5 max-sBIG:my-3">Lien Site :</p>
+							<a class="buttonLink buttonLink--small text-white" href="https://50nuancesdegrey.audrey-sonkes.be/">
+								Visiter le site
+							</a>
+						</div>
+
+						<div class="flex text-18 text-indigo my-3 max-xxlMD:flex-col max-lgBIG:flex-row max-sBIG:flex-col">
+							<p class="mr-3.5 underline underline-offset-4 decoration-2 max-xxlMD:my-3 max-lgBIG:m-0 max-lgBIG:mr-3.5 max-sBIG:my-3">Lien Git(code) :</p>
+							<a class="buttonLink buttonLink--medium text-white" href="https://github.com/asonkes/50NuancesDeGreys">
+								Explorer le code
+							</a>
+						</div>
+
+						<div class="flex text-18 text-indigo my-3">
+							<p class="mr-3.5 underline underline-offset-4 decoration-2">En savoir plus :</p>
+						</div>
+
+						<div class="absolute top-0 w-8 h-8 bg-fushia max-lgBIG:w-6 max-lgBIG:h-6 max-s:w-5 max-s:h-5" id="circle"></div>
+					</li>
+
+				</ul>
+			</div>
+		</div>
 	</div>
 
-	<div class="max-w-full h-screen font-family" id="contact">
-		<h2 class="text-white text-md p-7 tracking-wider">Contact</h2>
+	<div class="max-w-full h-screen font-family bg-black" id="contact">
+		<h2 class="text-white text-50 p-2.5 pt-16 tracking-wider">Contact</h2>
 	</div>
 {% endblock %}

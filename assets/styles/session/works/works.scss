@@ -1,0 +1,142 @@
+@use '../../mixins/mixins.scss';
+
+#container {
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 2px;
+        height: calc(100% - 1.25rem);
+        background: linear-gradient(to right, rgb(106, 6, 236), rgb(220, 0, 240));
+
+        @include mixins.lg-big {
+            left: -30px;
+            height: calc(100% - 5rem);
+        }
+
+        @include mixins.s {
+            left: -20px;
+            height: calc(100% - 5rem);
+        }
+    }
+
+    ul li {
+        @include mixins.lg-big {
+            width: 100%;
+            float: none;
+            clear: none;
+            margin-bottom: 80px;
+        }
+    }
+
+    ul li:nth-child(odd),
+    ul li:nth-child(even) {
+        display: block;
+
+        @include mixins.lg-big {
+            float: none;
+            clear: none;
+        }
+    }
+
+    ul li:nth-child(odd) {
+        float: left;
+        clear: right;
+        transform: translateX(-30px);
+
+        @include mixins.lg-big {
+            transform: translateX(0);
+        }
+    }
+
+    ul li:nth-child(even) {
+        float: right;
+        clear: left;
+        transform: translateX(30px);
+
+        @include mixins.lg-big {
+            transform: translateX(0);
+        }
+    }
+
+    .buttonLink {
+        background: linear-gradient(to right, rgb(106, 6, 236), rgb(220, 0, 240));
+        border-radius: 20px;
+        text-align: center;
+
+        &--small {
+            width: 100px;
+        }
+
+        &--medium {
+            width: 150px;
+        }
+    }
+
+    ul li #date {
+        background: linear-gradient(to right, rgb(106, 6, 236), rgb(220, 0, 240));
+
+        @include mixins.lg-big {
+            left: 0;
+        }
+    }
+
+    ul li:nth-child(odd) #date {
+        right: 0;
+    }
+
+    ul li:nth-child(even) #date {
+        left: 0;
+    }
+
+    ul li #circle {
+        border-radius: 50%;
+        z-index: 100;
+
+        &:after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 50%;
+            left: 50%;
+            background-color: rgb(106, 6, 236);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+
+            @include mixins.lg-big {
+                width: 15px;
+                height: 15px;
+            }
+
+            @include mixins.s {
+                width: 10px;
+                height: 10px;
+            }
+        }
+    }
+
+    ul li:nth-child(odd) #circle {
+        right: -35px;
+        transform: translate(50%, -50%);
+
+        @include mixins.lg-big {
+            left: -55px;
+        }
+
+        @include mixins.s {
+            left: -42px;
+        }
+    }
+
+    ul li:nth-child(even) #circle {
+        left: -33px;
+        transform: translate(-50%, -50%);
+
+        @include mixins.s {
+            left: -24px;
+        }
+    }
+}
