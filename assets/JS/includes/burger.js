@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const burgerUl = document.getElementById('burgerUl');
     const burgerLine = document.getElementById('burgerLine');
     const burgerNav = document.getElementById('burgerNav'); 
-    console.log('burgerNav', burgerNav);
 
     burgerIcon.addEventListener('click', () => {
         burgerUl.classList.toggle('active');

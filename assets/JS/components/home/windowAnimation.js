@@ -20,8 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
     function updateHoverEvents() {
-        let width = window.innerWidth;
-        console.log(width, 'width');
+        let width = window.innerWidth;;
 
         if(width > 990 ) {
             block.addEventListener('mouseover', addHoverClass);

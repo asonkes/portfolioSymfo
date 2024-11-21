@@ -11,3 +11,6 @@ import '../JS/components/home/windowAnimation.js';
 // JS pour animations (page "about")
 import '../JS/components/about/textAnimation.js';
 import '../JS/components/about/progessBar.js';
+
+// JS pour animations (page "about")
+import '../JS/components/works/timeLine.js';
