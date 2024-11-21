@@ -8,14 +8,17 @@
 /* import des fichiers pour le menu "burger" */
 @use './partials/burger/burger.scss';
 
-/* import des fichiers liés à la page "home" */
+/* import des fichiers liés à la session "home" */
 @use './session/home/backgroundImage/home.scss';
 @use './session/home/textAnimation/textAnimation.scss';
 @use './session/home/triangle/triangle.scss';
 @use './session/home/windowAnimation/windowAnimation.scss';
 
-/* import des fichiers liés à la page "about" */
+/* import des fichiers liés à la session "about" */
 @use './session/about/about.scss';
 
-/* import des fichiers liés à la page "works */
+/* import des fichiers liés à la session "works */
 @use './session/works/works.scss';
+
+/* import des fichiers liés à la session "contact" */
+@use './session/contact/contact.scss';

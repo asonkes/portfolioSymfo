@@ -57,10 +57,10 @@
         &.active {
             transform: translateX(-30px);
             transition: transform ease 4.5s;
-        }
 
-        @include mixins.lg-big {
-            transform: translateX(0);
+            @include mixins.lg-big {
+                transform: translateX(0);
+            }
         }
     }
 
@@ -72,10 +72,10 @@
         &.active {
             transform: translateX(30px);
             transition: transform ease 4.5s;
-        }
 
-        @include mixins.lg-big {
-            transform: translateX(0);
+            @include mixins.lg-big {
+                transform: translateX(0);
+            }
         }
     }
 

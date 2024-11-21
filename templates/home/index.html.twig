@@ -149,7 +149,7 @@
 						<p class="text-center text-20 text-rose">Ferme de Warelles</p>
 
 						<div class="w-full h-48 flex justify-center">
-							<img class="object-contain" src="{{ asset('images/images/fermeDeWarelles.png')}}" alt="Image représentant la couverture de la page de warelles">
+							<img class="object-contain" src="{{ asset('images/projets/fermeDeWarelles.webp')}}" alt="Image représentant la couverture de la page de warelles">
 						</div>
 
 						<div class="flex text-18 text-indigo my-3 max-xxlMD:flex-col max-lgBIG:flex-row max-sBIG:flex-col">
@@ -184,7 +184,7 @@
 						<p class="text-center text-20 text-rose">Jacadi</p>
 
 						<div class="w-full h-48 flex justify-center">
-							<img class="object-contain" src="{{ asset('images/images/Jacadi.webp')}}" alt="Image représentant la couverture de la page de warelles">
+							<img class="object-contain" src="{{ asset('images/projets/Jacadi.webp')}}" alt="Image représentant la couverture de la page de warelles">
 						</div>
 
 						<div class="flex text-18 text-indigo my-3 max-xxlMD:flex-col max-lgBIG:flex-row max-sBIG:flex-col">
@@ -221,7 +221,7 @@
 						<p class="text-center text-20 text-rose">LollyPop</p>
 
 						<div class="w-full h-48 flex justify-center">
-							<img class="object-contain" src="{{ asset('images/images/lollyPop.png')}}" alt="Image représentant la couverture de la page de warelles">
+							<img class="object-contain" src="{{ asset('images/projets/lollyPop.webp')}}" alt="Image représentant la couverture de la page de warelles">
 						</div>
 
 						<div class="flex text-18 text-indigo my-3 max-xxlMD:flex-col max-lgBIG:flex-row max-sBIG:flex-col">
@@ -258,7 +258,7 @@
 						<p class="text-center text-20 text-rose">SpeedCare</p>
 
 						<div class="w-full h-48 flex justify-center">
-							<img class="object-contain" src="{{ asset('images/images/garage.png')}}" alt="Image représentant la couverture de la page de warelles">
+							<img class="object-contain" src="{{ asset('images/projets/garage.webp')}}" alt="Image représentant la couverture de la page de warelles">
 						</div>
 
 						<div class="flex text-18 text-indigo my-3 max-xxlMD:flex-col max-lgBIG:flex-row max-sBIG:flex-col">
@@ -288,7 +288,7 @@
 						<p class="text-center text-20 text-rose">50 Nuances de Grey</p>
 
 						<div class="w-full h-48 flex justify-center">
-							<img class="object-contain" src="{{ asset('images/images/50NuancesDeGrey.png')}}" alt="Image représentant la couverture de la page de warelles">
+							<img class="object-contain" src="{{ asset('images/projets/50NuancesDeGrey.png')}}" alt="Image représentant la couverture de la page de warelles">
 						</div>
 
 						<div class="flex text-18 text-indigo my-3 max-xxlMD:flex-col max-lgBIG:flex-row max-sBIG:flex-col">
@@ -316,7 +316,51 @@
 		</div>
 	</div>
 
-	<div class="max-w-full h-screen font-family bg-black" id="contact">
+	<div class="max-w-full h-screen flex flex-col font-family bg-black" id="contact">
 		<h2 class="text-white text-50 p-2.5 pt-16 tracking-wider">Contact</h2>
+
+		<div class="max-w-full h-full flex max-lgBIG:flex-col border-4 border-indigo">
+			<div class="w-2/4 h-full flex justify-center items-center max-lgBIG:w-full border-4 border-white">
+
+				<div class="relative w-full" id="containerImage">
+					<img class="absolute object-contain" id="image1" src="{{ asset('images/images/ordi-transparent-1.webp')}}" alt="image représentant les lignes d'un ordinateur">
+
+					<img class="absolute object-contain" id="image2" src="{{ asset('images/images/ordi-color.webp')}}" alt="image représentant un ordinateur">
+				</div>
+			</div>
+
+			<div class="w-2/4 h-full max-lgBIG:w-full border-4 border-rose">
+				<h3 class="text-white text-28 p-2.5">Formulaire</h3>
+
+				<div class="max-w-full h-full flex justify-center items-center border-4 border-white">
+					<div class="w-2/4 flex flex-col border-4 border-red">
+
+						<div class="m-2.5 flex text-20 border-4 border-indigo">
+							<p class="mr-2.5 text-white text-25">Nom :</p>
+							<input placeholder="Veuillez insérer votre nom" type="text">
+						</div>
+
+						<div class="m-2.5 flex text-20 border-4 border-indigo">
+							<p class="mr-2.5 text-white text-25">Prénom :</p>
+							<input type="text">
+						</div>
+
+						<div class="m-2.5 flex text-20 border-4 border-indigo">
+							<p class="mr-2.5 text-white text-25">Email :</p>
+							<input type="text">
+						</div>
+
+						<div class="m-2.5 flex text-20 border-4 border-indigo">
+							<p class="mr-2.5 text-white text-25">Message :</p>
+							<textarea class="resize-none" name="" id=""></textarea>
+						</div>
+
+						<div class="flex justify-center">
+							<button class="m-5 buttonLink buttonLink--medium p-2 text-white" type="submit">Envoyer</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 {% endblock %}

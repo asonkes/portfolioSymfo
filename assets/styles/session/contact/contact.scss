@@ -1,0 +1,68 @@
+@use '../../mixins/mixins.scss';
+
+#containerImage {
+    width: 760px;
+    height: 500px;
+
+    @include mixins.xxl-lg {
+        height: 480px;
+    }
+
+    @include mixins.xxl-md {
+        height: 400px;
+    }
+
+    @include mixins.lg-big {
+        width: 500px;
+        margin: 20px;
+    }
+
+    @include mixins.s {
+        margin: 20px;
+        height: 350px;
+    }
+
+    @include mixins.s-big {
+        height: 300px;
+    }
+
+    @include mixins.xs {
+        height: 270px;
+    }
+
+    @include mixins.xs-big {
+        height: 230px;
+    }
+
+    #image1 {
+        &.active {
+            opacity: 0;
+            transition: opacity ease 1.5s;
+        }
+    }
+
+    #image2 {
+        opacity: 0;
+
+        &.active {
+            opacity: 1;
+            transition: opacity ease 1.5s;
+        }
+    }
+}
+
+.buttonLink {
+    background: linear-gradient(to right, rgb(106, 6, 236), rgb(220, 0, 240));
+    border-radius: 20px;
+    text-align: center;
+
+    &--medium {
+        width: 150px;
+    }
+}
+
+input {
+    width: 50%;
+    background-color: transparent;
+    border-bottom: 2px solid white;
+}
