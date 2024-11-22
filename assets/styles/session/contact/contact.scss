@@ -1,8 +1,8 @@
 @use '../../mixins/mixins.scss';
 
 #containerImage {
-    width: 760px;
-    height: 500px;
+    width: 600px;
+    height: 510px;
 
     @include mixins.xxl-lg {
         height: 480px;
@@ -59,10 +59,4 @@
     &--medium {
         width: 150px;
     }
-}
-
-input {
-    width: 50%;
-    background-color: transparent;
-    border-bottom: 2px solid white;
 }

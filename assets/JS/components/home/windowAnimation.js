@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateHoverEvents() {
         let width = window.innerWidth;;
 
-        if(width > 990 ) {
+        if(width > 992 ) {
             block.addEventListener('mouseover', addHoverClass);
             block.addEventListener('mouseleave', removeHoverClass);
             snip1573.classList.remove('active');

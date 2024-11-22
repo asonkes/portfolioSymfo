@@ -1,41 +1,36 @@
 @use '../../mixins/mixins.scss';
 
 #container {
+    padding-bottom: 140px;
+
+    @include mixins.lg-big {
+        padding-bottom: 0;
+    }
 
     &:after {
         content: '';
         position: absolute;
-        top: 0;
+        top: -35px;
         left: 50%;
         width: 2px;
-        height: calc(100% - 1.25rem);
+        height: 100%;
         background: linear-gradient(to right, rgb(106, 6, 236), rgb(220, 0, 240));
 
         @include mixins.lg-big {
+            height: calc(100% - 45px);
             left: -30px;
-            height: calc(100% - 5rem);
         }
 
-        @include mixins.s {
-            left: -20px;
-            height: calc(100% - 5rem);
+        @include mixins.xs {
+            left: -25px;
         }
     }
 
     ul li {
-        //opacity: 0;
-
-        /*
-        &.active {
-            opacity: 1;
-            transition: opacity ease 2.5s;
-        }*/
-
         @include mixins.lg-big {
             width: 100%;
             float: none;
             clear: none;
-            margin-bottom: 80px;
         }
     }
 
@@ -52,30 +47,42 @@
     ul li:nth-child(odd) {
         float: left;
         clear: right;
-        transform: translateX(-800px);
+        transform: translateX(-40px);
+        margin-bottom: -100px;
 
-        &.active {
-            transform: translateX(-30px);
-            transition: transform ease 4.5s;
-
-            @include mixins.lg-big {
-                transform: translateX(0);
-            }
+        @include mixins.lg-big {
+            margin-bottom: 80px;
+            transform: translateX(0);
         }
     }
 
     ul li:nth-child(even) {
         float: right;
         clear: left;
+        transform: translateX(40px);
+        margin-bottom: -100px;
+
+        @include mixins.lg-big {
+            margin-bottom: 80px;
+            transform: translateX(0);
+        }
+    }
+
+    #containerLiOdd {
+        transform: translateX(-800px);
+
+        &.active {
+            transform: translateX(0);
+            transition: transform ease 4.5s;
+        }
+    }
+
+    #containerLiEven {
         transform: translateX(800px);
 
         &.active {
-            transform: translateX(30px);
+            transform: translateX(0);
             transition: transform ease 4.5s;
-
-            @include mixins.lg-big {
-                transform: translateX(0);
-            }
         }
     }
 
@@ -137,24 +144,43 @@
     }
 
     ul li:nth-child(odd) #circle {
-        right: -35px;
+        top: -35px;
+        right: -40px;
         transform: translate(50%, -50%);
 
         @include mixins.lg-big {
-            left: -55px;
+            left: -52px;
         }
 
         @include mixins.s {
-            left: -42px;
+            left: -48px;
+        }
+
+        @include mixins.xs {
+            left: -43px;
         }
     }
 
     ul li:nth-child(even) #circle {
-        left: -33px;
+        top: -35px;
+        left: -38px;
         transform: translate(-50%, -50%);
 
-        @include mixins.s {
+        @include mixins.lg-big {
+            left: -29px;
+        }
+
+        @include mixins.xs {
             left: -24px;
+        }
+    }
+
+    #circle {
+        opacity: 0;
+
+        &.active {
+            opacity: 1;
+            transition: opacity ease 3.5s;
         }
     }
 }

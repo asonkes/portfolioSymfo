@@ -31,7 +31,8 @@ module.exports = {
       indigo: '#6461f2',
       indigoSpecial: 'rgba(100, 97, 242, 0.5)',
       rose: '#e796f7',
-      red: '#FF0000'
+      red: '#FF0000',
+      transparent: 'rgba(0, 0, 0, 0)'
     },
     screens: {
       'max-xxlLG': {'max': '1300px'},
