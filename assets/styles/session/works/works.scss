@@ -58,7 +58,6 @@
         .containerLi {
             opacity: 0;
             transform: translateX(-800px);
-            border: 4px solid red !important;
 
             &.active {
                 opacity: 1;
@@ -82,7 +81,6 @@
         .containerLi {
             opacity: 0;
             transform: translateX(800px);
-            border: 4px solid green !important;
 
             &.active {
                 opacity: 1;
