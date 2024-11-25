@@ -34,6 +34,10 @@ class Project
     #[ORM\Column]
     private ?\DateTimeImmutable $created_at = null;
 
+    // Propriété virtuelle non persistée (virtuelle car pas [ORM\Column......])
+    // Juste propriété de l'objet "Project"
+    private ?string $formattedDate = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -47,7 +51,6 @@ class Project
     public function setName(string $name): static
     {
         $this->name = $name;
-
         return $this;
     }
 
@@ -59,7 +62,6 @@ class Project
     public function setSiteLink(string $siteLink): static
     {
         $this->siteLink = $siteLink;
-
         return $this;
     }
 
@@ -71,7 +73,6 @@ class Project
     public function setFigmaLink(string $figmaLink): static
     {
         $this->figmaLink = $figmaLink;
-
         return $this;
     }
 
@@ -83,7 +84,6 @@ class Project
     public function setGitLink(string $gitLink): static
     {
         $this->gitLink = $gitLink;
-
         return $this;
     }
 
@@ -95,7 +95,6 @@ class Project
     public function setDescription(string $description): static
     {
         $this->description = $description;
-
         return $this;
     }
 
@@ -107,7 +106,6 @@ class Project
     public function setImage(string $image): static
     {
         $this->image = $image;
-
         return $this;
     }
 
@@ -119,7 +117,23 @@ class Project
     public function setCreatedAt(\DateTimeImmutable $created_at): static
     {
         $this->created_at = $created_at;
+        return $this;
+    }
 
+    /**
+     * Méthode pour obtenir la date formatée
+     */
+    public function getFormattedDate(): ?string
+    {
+        return $this->formattedDate;
+    }
+
+    /**
+     * Méthode pour définir la date formatée
+     */
+    public function setFormattedDate(string $formattedDate): static
+    {
+        $this->formattedDate = $formattedDate;
         return $this;
     }
 }
