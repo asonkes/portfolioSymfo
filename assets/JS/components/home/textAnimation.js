@@ -5,6 +5,10 @@ const texts = ["Web Developer", "Strong Woman", "Motivated Junior", "Web Develop
 let currentTextIndex = 0; // Index du mot
 let charIndex = 0; // Index de la lettre dans le mot
 
+if(!dynamicText) {
+    return;
+}
+
 function typewriter() {
     if (dynamicText) {
         // Affiche chaque lettre du mot actuel

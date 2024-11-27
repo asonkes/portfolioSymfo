@@ -23,13 +23,17 @@ document.addEventListener('DOMContentLoaded', () => {
         let width = window.innerWidth;;
 
         if(width > 992 ) {
-            block.addEventListener('mouseover', addHoverClass);
-            block.addEventListener('mouseleave', removeHoverClass);
-            snip1573.classList.remove('active');
+            if(block && snip1573) {
+                block.addEventListener('mouseover', addHoverClass);
+                block.addEventListener('mouseleave', removeHoverClass);
+                snip1573.classList.remove('active');
+            }
         } else {
-            block.removeEventListener('mouseover', addHoverClass);
-            block.removeEventListener('mouseleave', removeHoverClass);
-            snip1573.classList.add('active');
+            if(block && snip1573) {
+                block.removeEventListener('mouseover', addHoverClass);
+                block.removeEventListener('mouseleave', removeHoverClass);
+                snip1573.classList.add('active');
+            }
         }
     }
 

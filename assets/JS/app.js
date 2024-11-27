@@ -10,7 +10,7 @@ import '../JS/components/home/windowAnimation.js';
 
 // JS pour animations (session "about")
 import '../JS/components/about/textAnimation.js';
-import '../JS/components/about/progessBar.js';
+import '../JS/components/about/progressBar.js';
 
 // JS pour animation (session "about")
 import '../JS/components/works/timeLine.js';

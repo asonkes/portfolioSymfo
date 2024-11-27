@@ -1,4 +1,9 @@
 document.addEventListener(('DOMContentLoaded'), () => {
+    const about = document.getElementById('about');
+
+    if(!about) {
+        return;
+    }
 
     let animationTriggered = false;
 
@@ -18,7 +23,6 @@ document.addEventListener(('DOMContentLoaded'), () => {
             progressBar.forEach((e) => {
                 e.classList.add('active');
             })
-
 
             // Fonctionnalités pour l'augmentation des chiffres
             const progressLetter = document.querySelectorAll('.progressLetter');

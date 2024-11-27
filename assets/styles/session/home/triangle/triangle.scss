@@ -2,7 +2,7 @@
 
 #triangle {
     position: absolute;
-    top: 15%;
+    top: 25%;
     left: 35%;
     background-color: #6461f2;
     transform: rotate(-90deg) skewX(-30deg) scale(1, .866);
@@ -81,10 +81,15 @@
         width: 155px;
         height: 155px;
     }
+
+    @include mixins.xs-big {
+        width: 140px;
+        height: 140px;
+    }
 }
 
 #triangleTwo {
-    top: 13.5%;
+    top: 24%;
     left: 36.5%;
     position: absolute;
     z-index: 11;
@@ -95,11 +100,11 @@
     }
 
     @include mixins.md {
-        top: 14%;
         left: 27.5%;
     }
 
     @include mixins.s {
+        top: 24%;
         left: 24.5%;
     }
 
@@ -107,8 +112,12 @@
         left: 18%;
     }
 
+    @include mixins.xs-big {
+        top: 24.5%;
+    }
+
     .triangleTwo--img {
-        max-width: 100%;
+        max-width: 95%;
         height: auto;
 
         @include mixins.xxl-big {
@@ -138,14 +147,34 @@
         @include mixins.xs {
             max-width: 250px;
         }
+
+        @include mixins.xs-big {
+            max-width: 220px;
+        }
     }
 }
 
 #triangleTwo-transparent {
     width: 450px;
     height: 450px;
-    top: 15%;
-    left: 40%;
+    top: 25%;
+    left: 35%;
     position: absolute;
     z-index: 44;
+
+    @include mixins.xxl-big {
+        width: 400px;
+        height: 400px;
+        left: 35%;
+    }
+
+    @include mixins.xxl-lg {
+        width: 380px;
+        height: 380px;
+    }
+
+    @include mixins.xxl-md {
+        width: 360px;
+        height: 360px;
+    }
 }

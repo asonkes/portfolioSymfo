@@ -3,6 +3,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const circle = document.querySelectorAll('.circle');
     const containerLi = document.querySelectorAll('.containerLi');
 
+    if (circle.length === 0 || containerLi.length === 0) {
+        return;
+    }
+
     // Garder la trace des indices déjà affichés
     let currentIndex = 0;
 

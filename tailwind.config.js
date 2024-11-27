@@ -6,6 +6,8 @@ module.exports = {
     "./templates/includes/partials/header.html.twig",
     "./templates/includes/partials/footer.html.twig",
     "./templates/home/index.html.twig",
+    "./templates/registration/register.html.twig",
+    "./templates/security/login.html.twig",
   ],
   theme: {
     fontFamily: {

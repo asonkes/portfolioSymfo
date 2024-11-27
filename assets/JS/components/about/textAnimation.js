@@ -2,6 +2,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const movingText = document.getElementById('movingText');
 
+    if(!movingText) {
+        return;
+    }
+
     function animateScroll() {
         
         const about = document.getElementById('about');

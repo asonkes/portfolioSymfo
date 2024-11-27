@@ -53,11 +53,11 @@
 
 .snip1573.hover {
   &:before {
-    transform: skew(35deg) translateX(-55%);
+    transform: skew(40deg) translateX(-60%);
   }
 
   &:after {
-    transform: skew(35deg) translateX(55%);
+    transform: skew(40deg) translateX(50%);
   }
 
   .figcaption {
@@ -68,8 +68,10 @@
 
 .figcationText {
   position: absolute;
-  top: 65%;
-  left: 15%;
+  top: 70%;
+  left: 20%;
+  width: 325px;
+  text-align: center;
   background-color: #000000;
   border: 2px solid #fff;
   font-size: 40px;
@@ -79,6 +81,14 @@
   letter-spacing: 2px;
   z-index: 46;
   display: none;
+
+  @include mixins.xxl-lg {
+    left: 13%;
+  }
+
+  @include mixins.xxl-md {
+    left: 8%;
+  }
 
   &.active {
     display: block;
