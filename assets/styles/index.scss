@@ -15,10 +15,12 @@
 @use './session/home/windowAnimation/windowAnimation.scss';
 
 /* import des fichiers liés à la session "about" */
-@use './session/about/about.scss';
+@use './session/about/backgroundImage/about.scss';
+@use './session/about/movingText/movingtext.scss';
+@use './session/about/progressBar/progressBar.scss';
 
 /* import des fichiers liés à la session "works */
-@use './session/works/works.scss';
+@use './session/works/timeLine/timeLine.scss';
 
 /* import des fichiers liés à la session "contact" */
 @use './session/contact/contact.scss';

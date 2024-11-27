@@ -1,12 +1,3 @@
-#movingText {
-    &.active {
-        position: relative;
-        left: 0;
-        opacity: 1;
-        transition: left ease 2.5s, opacity ease 5.5s;
-    }
-}
-
 .progressBar {
     width: 0%;
     opacity: 0;

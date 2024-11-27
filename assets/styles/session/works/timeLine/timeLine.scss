@@ -1,4 +1,4 @@
-@use '../../mixins/mixins.scss';
+@use '../../../mixins/mixins.scss';
 
 #container {
     padding-bottom: 140px;
@@ -18,11 +18,15 @@
 
         @include mixins.lg-big {
             height: calc(100% - 45px);
-            left: -30px;
+            left: -32px;
+        }
+
+        @include mixins.s-big {
+            left: -25px;
         }
 
         @include mixins.xs {
-            left: -25px;
+            left: -20px;
         }
     }
 
@@ -91,9 +95,27 @@
     }
 
     .buttonLink {
-        background: linear-gradient(to right, rgb(106, 6, 236), rgb(220, 0, 240));
+        position: relative;
+        display: inline-block;
+        background-color: black;
         border-radius: 20px;
         text-align: center;
+
+        &:hover {
+            scale: 1.1;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            z-index: -1;
+            border-radius: 20px;
+            background: linear-gradient(to right, rgb(106, 6, 236), rgb(220, 0, 240));
+        }
 
         &--small {
             width: 100px;
@@ -153,15 +175,19 @@
         transform: translate(50%, -50%);
 
         @include mixins.lg-big {
-            left: -52px;
+            left: -55px;
         }
 
         @include mixins.s {
-            left: -48px;
+            left: -50px;
+        }
+
+        @include mixins.s-big {
+            left: -44px;
         }
 
         @include mixins.xs {
-            left: -43px;
+            left: -38px;
         }
     }
 
@@ -171,11 +197,19 @@
         transform: translate(-50%, -50%);
 
         @include mixins.lg-big {
-            left: -29px;
+            left: -33px;
+        }
+
+        @include mixins.s {
+            left: -30px;
+        }
+
+        @include mixins.s-big {
+            left: -24px;
         }
 
         @include mixins.xs {
-            left: -24px;
+            left: -18px;
         }
     }
 

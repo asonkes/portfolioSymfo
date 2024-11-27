@@ -28,14 +28,14 @@
     }
 }
 
-@mixin md {
-    @media (max-width: 600px) {
+@mixin md-big {
+    @media (max-width: 650px) {
         @content;
     }
 }
 
-@mixin md-big {
-    @media (max-width: 650px) {
+@mixin md {
+    @media (max-width: 600px) {
         @content;
     }
 }
