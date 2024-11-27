@@ -94,38 +94,6 @@
         }
     }
 
-    .buttonLink {
-        position: relative;
-        display: inline-block;
-        background-color: black;
-        border-radius: 20px;
-        text-align: center;
-
-        &:hover {
-            scale: 1.1;
-        }
-
-        &:after {
-            content: '';
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
-            z-index: -1;
-            border-radius: 20px;
-            background: linear-gradient(to right, rgb(106, 6, 236), rgb(220, 0, 240));
-        }
-
-        &--small {
-            width: 100px;
-        }
-
-        &--medium {
-            width: 150px;
-        }
-    }
-
     ul li #date {
         background: linear-gradient(to right, rgb(106, 6, 236), rgb(220, 0, 240));
 

@@ -27,7 +27,7 @@ class AppFixtures extends Fixture
                 'figma_link' => 'https://www.figma.com/design/w6XUCOSEukmwK0zdTs9kYm/Jacadi?node-id=0-1&node-type=canvas&t=CI1ssSLkar2WXsiG-0',
                 'git_link' => 'https://github.com/asonkes/Jacadi',
                 'description' => "Projet fin d'étude",
-                'image' => 'Jacadi.webp',
+                'image' => 'jacadi.webp',
                 'created_at' => '2024-06-26 18:21:20',
             ],
             [
