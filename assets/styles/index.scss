@@ -29,3 +29,9 @@
 
 /* import des fichiers liés à la session "contact" */
 @use './session/contact/contact.scss';
+
+/* import des fichiers liés à la page "connection" */
+@use './login/login.scss';
+
+/* import des fichiers liés à la page "registration" */
+@use './register/register.scss';

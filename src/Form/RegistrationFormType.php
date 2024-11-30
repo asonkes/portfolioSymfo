@@ -23,30 +23,31 @@ class RegistrationFormType extends AbstractType
                 'firstname',
                 TextType::class,
                 [
-                    'label' => 'Nom'
+                    'label' => 'Nom',
+                    'attr' => [
+                        'class' => 'input'
+                    ]
                 ]
             )
             ->add('lastname', TextType::class, [
-                'label' => 'Prénom'
+                'label' => 'Prénom',
+                'attr' => [
+                    'class' => 'input'
+                ]
             ])
             ->add('email', EmailType::class, [
-                'label' => 'E-mail'
-            ])
-            ->add('agreeTerms', CheckboxType::class, [
-                'mapped' => false,
-                'label' => "J'accepte les conditions générales de ce site",
-                'constraints' => [
-                    new IsTrue([
-                        'message' => 'Vous devez acceptez nos conditions',
-                    ]),
-                ],
+                'label' => 'E-mail',
+                'attr' => [
+                    'class' => 'input'
+                ]
             ])
             ->add('plainPassword', PasswordType::class, [
                 // instead of being set onto the object directly,
                 // this is read and encoded in the controller
                 'mapped' => false,
                 'attr' => [
-                    'autocomplete' => 'new-password'
+                    'autocomplete' => 'new-password',
+                    'class' => 'input'
                 ],
                 'label' => 'Mot de Passe',
                 'constraints' => [
@@ -60,7 +61,15 @@ class RegistrationFormType extends AbstractType
                     ]),
                 ],
             ])
-        ;
+            ->add('agreeTerms', CheckboxType::class, [
+                'mapped' => false,
+                'label' => "J'accepte les conditions générales de ce site",
+                'constraints' => [
+                    new IsTrue([
+                        'message' => 'Vous devez acceptez nos conditions',
+                    ]),
+                ],
+            ]);
     }
 
     public function configureOptions(OptionsResolver $resolver): void
