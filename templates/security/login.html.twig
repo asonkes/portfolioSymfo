@@ -9,38 +9,42 @@
 
 		<h2 class="text-white text-50 p-2.5 pt-16 tracking-wider">Connexion</h2>
 
-		<div class="w-full flex justify-center border-4 border-rose">
-			<div class="w-2/4 flex justify-center border-4 border-red">
-				<form class="w-full flex flex-col text-white border-4 border-fushia" method="post">
+		<div class="w-full flex grow justify-center items-center">
+			<div class="w-5/12 flex justify-center">
+				<form class="w-full text-white" method="post">
 					{% if error %}
 						<div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
 					{% endif %}
 
 					{% if app.user %}
-						<div class="mb-3 text-white">
+						<div class="mb-3 flex flex-col text-18 text-white">
 							Vous êtes connecté(e) comme
 							{{ app.user.userIdentifier }},
-							<a class="text-white" href="{{ path('app_logout') }}">Me déconnecter</a>
+							<a class="text-rose py-1.5" href="{{ path('app_logout') }}">Me déconnecter</a>
 						</div>
 					{% endif %}
 
-					<h1>Me connecter</h1>
+					<div class="flex flex-col my-3 p-1.5">
+						<label class="text-20" for="inputEmail">E-mail</label>
+						<input class="text-18 text-rose outline-none border-b-2 border-white bg-transparent" type="email" value="{{ last_username }}" name="email" id="inputEmail" autocomplete="email" required autofocus>
+					</div>
 
-					<label for="inputEmail">E-mail</label>
-					<input class="text-black" type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
-
-					<label for="inputPassword">Mot de passe</label>
-					<input class="text-black" type="password" name="password" id="inputPassword" autocomplete="current-password" required>
+					<div class="flex flex-col my-3 p-1.5">
+						<label class="text-20" for="inputPassword">Mot de passe</label>
+						<input class="text-18 text-rose outline-none border-b-2 border-white bg-transparent" type="password" name="password" id="inputPassword" autocomplete="current-password" required>
+					</div>
 
 					<input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
 
-					<p class="text-20 py-5">Vous n'êtes pas encore inscrit???
-						<a class="text-20 text-red" href="{{ path('app_register')}}">Inscrivez-vous</a>
+					<p class="text-20 py-4">Vous n'êtes pas encore inscrit???
+						<a class="text-20 text-rose" href="{{ path('app_register')}}">Inscrivez-vous</a>
 					</p>
 
-					<button type="submit">
-						Me connecter
-					</button>
+					<div class="w-full flex justify-center my-3 p-1.5">
+						<button class="text-20 p-3 border-2 border-white rounded-2xl" type="submit">
+							Me connecter
+						</button>
+					</div>
 				</form>
 			</div>
 		</div>

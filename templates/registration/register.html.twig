@@ -4,11 +4,11 @@
 {% endblock %}
 
 {% block body %}
-	<div class="max-w-full h-full flex flex-col font-family border-4 border-red" id="registration">
-		<h2 class="text-white text-50 p-2.5 pt-16 tracking-wider border-4 border-rose">Inscription</h2>
+	<div class="max-w-full h-full flex flex-col font-family" id="registration">
+		<h2 class="text-white text-50 p-2.5 pt-16 tracking-wider">Inscription</h2>
 
-		<div class="w-full flex grow justify-center items-center border-4 border-red">
-			<div class="w-2/4 flex justify-center border-4 border-orange">
+		<div class="w-full flex grow justify-center items-center">
+			<div class="w-2/4 flex justify-center">
 				{{ form_errors(registrationForm) }}
 				{{ form_start(registrationForm) }}
 
