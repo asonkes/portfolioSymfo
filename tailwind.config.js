@@ -33,7 +33,7 @@ module.exports = {
       fushia: 'rgb(188, 0, 240)',
       white: '#ffffff',
       indigo: '#6461f2',
-      indigoSpecial: 'rgba(100, 97, 242, 0.5)',
+      indigoSpecial: 'rgba(100, 97, 242, 0.95)',
       orange: '#FFA500',
       rose: '#e796f7',
       red: '#FF0000',
@@ -61,6 +61,7 @@ module.exports = {
         '65': '65%',
         '70': '70%',
         '80': '80%',
+        '90': '90%',
       },
       height: {
         '90': '90%',

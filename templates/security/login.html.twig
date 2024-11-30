@@ -34,6 +34,10 @@
 
 					<input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
 
+					<p class="text-20 py-5">Vous n'êtes pas encore inscrit???
+						<a class="text-20 text-red" href="{{ path('app_register')}}">Inscrivez-vous</a>
+					</p>
+
 					<button type="submit">
 						Me connecter
 					</button>

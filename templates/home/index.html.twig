@@ -135,109 +135,125 @@
 		</div>
 	</div>
 
-	<div class="max-w-full flex justify-center font-family bg-black" id="works">
-		<div class="w-9/12 max-lgMD:w-10/12">
-			<h2 class="text-white text-center text-50 p-2.5 pt-16 tracking-wider">Works</h2>
+	<div class="max-w-full bg-black" id="works">
 
-			<div class="w-full flex grow justify-center pt-20 overflow-hidden">
-				<div class="relative w-4/6 h-full max-lgBIG:w-4/5" id="container">
-					<ul class="relative w-full h-full text-white">
+		{% for label, messages in app.flashes %}
+			{% for message in messages %}
+				<div class="alert__message-danger-project">
+					{{ message }}
+				</div>
+			{% endfor %}
+		{% endfor %}
 
-						{% for project in projects %}
-							<li class="relative z-50 w-3/6 mb-5">
-								<div class="containerLi relative z-50 w-full border border-white py-2 rounded-2xl">
-									<h3 class="text-center text-25 text-rose">{{project.description}}</h3>
+		<div class="max-w-full flex justify-center font-family">
+			<div class="w-9/12 max-lgMD:w-10/12">
+				<h2 class="text-white text-center text-50 p-2.5 pt-16 tracking-wider">Works</h2>
 
-									<p class="absolute w-32 -top-14 text-center text-18 text-white py-2 rounded-2xl" id="date">{{ project.formattedDate}}</p>
+				<div class="w-full flex grow justify-center pt-20 overflow-hidden">
+					<div class="relative w-4/6 h-full max-lgBIG:w-4/5" id="container">
 
-									<p class="text-center text-22 text-white">{{project.name}}</p>
+						{% if projects is not empty %}
+							<ul class="relative w-full h-full text-white">
+								{% for project in projects %}
+									<li class="relative z-50 w-3/6 mb-5">
+										<div class="containerLi relative z-50 w-full border border-white rounded-2xl">
+											<h3 class="text-center text-25 text-rose my-3">{{project.description}}</h3>
 
-									<div class="w-full h-56 flex justify-center my-2">
-										<img class="object-cover" src="{{ asset('images/projets/' ~ project.image)}}" alt="Image représentant la couverture de la page de warelles">
-									</div>
+											<p class="absolute w-32 -top-14 text-center text-18 text-white p-2 rounded-2xl" id="date">{{ project.formattedDate}}</p>
 
-									<div class="flex text-20 text-indigo m-5">
-										<a class="buttonLink buttonLink--small text-white" href="{{project.siteLink}}" target="_blank">
-											Visiter le site
-										</a>
-									</div>
+											<p class="text-center text-22 text-white my-3">{{project.name}}</p>
 
-									<div class="flex text-20 text-indigo m-5">
-										<a class="buttonLink buttonLink--medium text-white" href="{{project.figmaLink}}" target="_blank">
-											Explorer la maquette
-										</a>
-									</div>
+											<div class="w-full flex justify-center">
+												<img class="object-contain" src="{{ asset('images/projets/' ~ project.image)}}" alt="Image représentant la couverture de la page de warelles">
+											</div>
 
-									<div class="flex text-20 text-indigo m-5">
-										<a class="buttonLink buttonLink--medium text-white" href="{{project.gitLink}}" target="_blank">
-											Consulter le code
-										</a>
-									</div>
+											<div class="flex text-20 text-indigo m-5">
+												<a class="buttonLink buttonLink--small text-white" href="{{project.siteLink}}" target="_blank">
+													Visiter le site
+												</a>
+											</div>
 
-									<div class="flex flex-col text-20 text-indigo m-5">
-										<p class="underline underline-offset-4 decoration-2">En savoir plus :</p>
-									</div>
-								</div>
+											{% if project.figmaLink is not empty %}
+												<div class="flex text-20 text-indigo m-5">
+													<a class="buttonLink buttonLink--medium text-white" href="{{project.figmaLink}}" target="_blank">
+														Explorer la maquette
+													</a>
+												</div>
+											{% endif %}
 
-								<div class="circle absolute top-0 w-8 h-8 bg-fushia max-lgBIG:w-6 max-lgBIG:h-6 max-s:w-5 max-s:h-5"></div>
-							</li>
-						{% endfor %}
+											<div class="flex text-20 text-indigo m-5">
+												<a class="buttonLink buttonLink--medium text-white" href="{{project.gitLink}}" target="_blank">
+													Consulter le code
+												</a>
+											</div>
 
+											<div class="flex flex-col text-20 text-indigo m-5">
+												<p class="underline underline-offset-4 decoration-2">En savoir plus :</p>
+											</div>
+										</div>
+
+										<div class="circle absolute top-0 w-8 h-8 bg-fushia max-lgBIG:w-6 max-lgBIG:h-6 max-s:w-5 max-s:h-5"></div>
+									</li>
+								{% endfor %}
+							</ul>
+						{% else %}
+							<p class="text-white">Aucun projet disponible pour le moment.</p>
+						{% endif %}
 					</ul>
 				</div>
 			</div>
 		</div>
 	</div>
+</div>
 
-	<div class="max-w-full h-full flex justify-center font-family bg-black" id="contact">
+<div class="max-w-full h-full flex justify-center font-family bg-black" id="contact">
 
-		<div class="w-9/12 max-lgMD:w-10/12">
-			<h2 class="text-white text-center text-50 p-2.5 pt-16 tracking-wider">Contact</h2>
+	<div class="w-9/12 max-lgMD:w-10/12">
+		<h2 class="text-white text-center text-50 p-2.5 pt-16 tracking-wider">Contact</h2>
 
-			<div class="max-w-full flex max-lgBIG:flex-col">
-				<div class="w-2/4 flex justify-center items-center max-lgBIG:w-full">
-					<div class="relative w-full h-full" id="containerImage">
-						<img class="absolute object-contain" id="image1" src="{{ asset('images/images/ordi-transparent-1.webp')}}" alt="image représentant les lignes d'un ordinateur">
+		<div class="max-w-full flex max-lgBIG:flex-col">
+			<div class="w-2/4 flex justify-center items-center max-lgBIG:w-full">
+				<div class="relative w-full h-full" id="containerImage">
+					<img class="absolute object-contain" id="image1" src="{{ asset('images/images/ordi-transparent-1.webp')}}" alt="image représentant les lignes d'un ordinateur">
 
-						<img class="absolute object-contain" id="image2" src="{{ asset('images/images/ordi-color.webp')}}" alt="image représentant un ordinateur">
-					</div>
+					<img class="absolute object-contain" id="image2" src="{{ asset('images/images/ordi-color.webp')}}" alt="image représentant un ordinateur">
 				</div>
+			</div>
 
-				<div class="w-2/4 h-screen max-lgBIG:w-full">
-					<div class="max-w-full h-full flex justify-center items-center">
-						<div class="w-5/6 flex flex-col">
-							<div>
-								<h3 class="my-5 text-rose text-center text-35">Me contacter</h3>
-							</div>
+			<div class="w-2/4 h-screen max-lgBIG:w-full">
+				<div class="max-w-full h-full flex justify-center items-center">
+					<div class="w-5/6 flex flex-col">
+						<div>
+							<h3 class="my-5 text-rose text-center text-35">Me contacter</h3>
+						</div>
 
-							<div class="w-full my-3 flex">
-								<p class="w-32 text-white text-22 max-s:text-22 max-xs:text-18">
-									Nom :</p>
-								<input class="w-full text-18 border-b-2 border-white bg-transparent max-sBIG:text-16" placeholder="Veuillez insérer votre nom" type="text">
-							</div>
+						<div class="w-full my-3 flex">
+							<p class="w-32 text-white text-22 max-s:text-22 max-xs:text-18">
+								Nom :</p>
+							<input class="w-full text-18 border-b-2 border-white bg-transparent max-sBIG:text-16" placeholder="Veuillez insérer votre nom" type="text">
+						</div>
 
-							<div class="my-3 flex">
-								<p class="w-32 text-white text-22 max-s:text-22 max-xs:text-18">Prénom :</p>
-								<input class="w-full text-18 border-b-2 border-white bg-transparent max-sBIG:text-16" placeholder="Veuillez insérer pour prénom" type="text">
-							</div>
+						<div class="my-3 flex">
+							<p class="w-32 text-white text-22 max-s:text-22 max-xs:text-18">Prénom :</p>
+							<input class="w-full text-18 border-b-2 border-white bg-transparent max-sBIG:text-16" placeholder="Veuillez insérer pour prénom" type="text">
+						</div>
 
-							<div class="my-3 flex">
-								<p class="w-32 text-white text-22 max-s:text-22 max-xs:text-18">Email :</p>
-								<input class="w-full text-18 border-b-2 border-white bg-transparent max-sBIG:text-16" placeholder="E-mail" type="text">
-							</div>
+						<div class="my-3 flex">
+							<p class="w-32 text-white text-22 max-s:text-22 max-xs:text-18">Email :</p>
+							<input class="w-full text-18 border-b-2 border-white bg-transparent max-sBIG:text-16" placeholder="E-mail" type="text">
+						</div>
 
-							<div class="my-3 flex flex-col">
-								<p class="mr-2.5 text-white text-22 max-s:text-22 max-xs:text-18">Message :</p>
-								<textarea class="w-full h-48 my-2.5 resize-none" name=""></textarea>
-							</div>
+						<div class="my-3 flex flex-col">
+							<p class="mr-2.5 text-white text-22 max-s:text-22 max-xs:text-18">Message :</p>
+							<textarea class="w-full h-48 my-2.5 resize-none" name=""></textarea>
+						</div>
 
-							<div class="flex justify-center border-4 border-red">
-								<button class="buttonLink--medium m-5 text-white border border-white hover:scale-105" id="button" type="submit">Envoyer</button>
-							</div>
+						<div class="relative flex justify-center m-3">
+							<button class="buttonLink buttonLink--medium m-5 text-22 text-center text-white" id="button" type="submit">Envoyer</button>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-{% endblock %}
+</div>{% endblock %}

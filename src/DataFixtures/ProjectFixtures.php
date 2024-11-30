@@ -5,9 +5,8 @@ namespace App\DataFixtures;
 use App\Entity\Project;
 use Doctrine\Persistence\ObjectManager;
 use Doctrine\Bundle\FixturesBundle\Fixture;
-use Symfony\Component\Validator\Constraints\DateTime;
 
-class AppFixtures extends Fixture
+class ProjectFixtures extends Fixture
 {
     public function load(ObjectManager $manager): void
     {
@@ -33,7 +32,7 @@ class AppFixtures extends Fixture
             [
                 'name' => 'Speedcare',
                 'site_link' => 'https://garage.audrey-sonkes.be/',
-                'figma_link' => 'null',
+                'figma_link' => '',
                 'git_link' => 'https://github.com/asonkes/garage',
                 'description' => '1er Projet Symfony',
                 'image' => 'garage.webp',
@@ -51,9 +50,9 @@ class AppFixtures extends Fixture
             [
                 'name' => '50Nuances de Grey',
                 'site_link' => 'https://50nuancesdegrey.audrey-sonkes.be/',
-                'figma_link' => 'null',
+                'figma_link' => '',
                 'git_link' => 'https://github.com/asonkes/50NuancesDeGrey',
-                'description' => 'Exercice Cours(code entièrement en html/CSS)',
+                'description' => 'Projet Cours (HTML / CSS)',
                 'image' => '50NuancesDeGrey.webp',
                 'created_at' => '2022-12-26 17:30:18'
             ],
@@ -64,7 +63,13 @@ class AppFixtures extends Fixture
 
             $project->setName($data['name']);
             $project->setSiteLink($data['site_link']);
-            $project->setFigmaLink($data['figma_link']);
+
+            if ($data['figma_link'] !== 'null') {
+                $project->setFigmaLink($data['figma_link']);
+            } else {
+                $project->setFigmaLink('');
+            }
+
             $project->setGitLink($data['git_link']);
             $project->setDescription($data['description']);
             $project->setImage($data['image']);

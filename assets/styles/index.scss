@@ -4,6 +4,8 @@
 
 /* import des fichiers avec css pour tout le site */
 @use './components/button/button.scss';
+@use './components/flashMessage/flashmessage.scss';
+@use './components/icons/icons.scss';
 
 /* import des mixins */
 @use './mixins/mixins.scss';

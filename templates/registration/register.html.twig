@@ -4,19 +4,45 @@
 {% endblock %}
 
 {% block body %}
-	<div id="registration">
-		<h1>Inscription</h1>
+	<div class="max-w-full h-full flex flex-col font-family bg-black" id="registration">
 
-		{{ form_errors(registrationForm) }}
+		<h2 class="text-white text-50 p-2.5 pt-16 tracking-wider">Inscription</h2>
 
-		{{ form_start(registrationForm) }}
-		{{ form_row(registrationForm.email) }}
-		{{ form_row(registrationForm.plainPassword, {
-            label: 'Password'
-        }) }}
-		{{ form_row(registrationForm.agreeTerms) }}
+		<div class="w-full flex grow justify-center border-4 border-rose">
+			<div class="w-2/4 flex justify-center text-white border-4 border-red">
 
-		<button type="submit" class="btn">M'inscrire</button>
-		{{ form_end(registrationForm) }}
+				{{ form_errors(registrationForm) }}
+
+				{{ form_start(registrationForm) }}
+
+				<div class="flex text-20 my-3 border-4 border-red">
+					{{ form_row(registrationForm.firstname) }}
+				</div>
+
+				<div class="text-20 my-3 border-4 border-red">
+					{{ form_row(registrationForm.lastname) }}
+				</div>
+
+				<div class="text-20 my-3 border-4 border-red">
+					{{ form_row(registrationForm.email) }}
+				</div>
+
+				<div class="text-20 my-3 border-4 border-red">
+					{{ form_row(registrationForm.plainPassword, 
+					{label: 'Password'}) 
+					}}
+				</div>
+
+				<div class="text-20 my-3 border-4 border-red">
+					{{ form_row(registrationForm.agreeTerms) }}
+				</div>
+
+				<div class="flex justify-center text-20 my-3 border-4 border-red">
+					<button type="submit" class="text-red text-red p-3 border-4 border-red">M'inscrire</button>
+					{{ form_end(registrationForm) }}
+				</div>
+
+			</div>
+		</div>
 	</div>
 {% endblock %}

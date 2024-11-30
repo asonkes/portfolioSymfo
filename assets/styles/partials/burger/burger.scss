@@ -7,7 +7,7 @@
         position: absolute;
         display: block;
         height: 4px;
-        width: 48px;
+        width: 40px;
         left: 0;
         border-radius: 12px;
         top: -10px;
@@ -39,6 +39,14 @@
             top: 0;
             transform: rotate(-45deg);
             transition: transform ease-in-out 0.5s;
+        }
+    }
+
+    .link {
+        border: 4px solid red;
+
+        &:hover {
+            scale: 1.1;
         }
     }
 }

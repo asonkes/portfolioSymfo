@@ -1,0 +1,24 @@
+.alert__message-danger,
+.alert__message-danger-project,
+.alert__message-success,
+.alert__message-warning {
+    position: relative;
+    top: 64px;
+    font-size: 16px;
+    padding: 10px;
+    z-index: 8999999999999999999999999;
+    color: white;
+}
+
+.alert__message-danger,
+.alert__message-danger-project {
+    background-color: rgba(255, 0, 0, 0.6);
+}
+
+.alert__message-success {
+    background-color: rgba(98, 154, 40, 0.9);
+}
+
+.alert__message-warning {
+    background-color: rgba(255, 255, 0, 0.9);
+}

@@ -4,7 +4,6 @@ namespace App\Controller;
 
 use App\Entity\Project;
 use Doctrine\ORM\EntityManagerInterface;
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -12,7 +11,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class HomeController extends AbstractController
 {
     #[Route('/', name: 'home')]
-    public function index(EntityManagerInterface $em, Request $request): Response
+    public function index(EntityManagerInterface $em): Response
     {
         $projects = $em->getRepository(Project::class)->findAll();
 
@@ -26,10 +25,13 @@ class HomeController extends AbstractController
             // Format de la date pour chaque projet
             $formattedDate = $formatter->format($project->getCreatedAt());
             // Ajouter la date formatée à l'objet projet via une méthode "setFormattedDate"
-            $project->setFormattedDate($formattedDate);  // Assurez-vous que cette méthode existe dans l'entité Project
+            $project->setFormattedDate($formattedDate);
         }
 
-        // Passer les projets formatés à Twig
+        if (empty($projects)) {
+            $this->addFlash('danger-project', "Nous n'avons pas trouvé de produits pour vous ! Désolé !");
+        }
+
         return $this->render('home/index.html.twig', [
             'projects' => $projects,
         ]);
