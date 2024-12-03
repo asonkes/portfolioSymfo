@@ -12,8 +12,9 @@ import '../JS/components/home/windowAnimation.js';
 import '../JS/components/about/textAnimation.js';
 import '../JS/components/about/progressBar.js';
 
-// JS pour animation (session "about")
+// JS pour animation (session "works")
 import '../JS/components/works/timeLine.js';
+import './components/works/readMore.js';
 
 // JS pour animation (session "contact")
 import '../JS/components/contact/mouseEffect.js';

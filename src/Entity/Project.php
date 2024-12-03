@@ -25,7 +25,7 @@ class Project
     #[ORM\Column(length: 255)]
     private ?string $gitLink = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 700)]
     private ?string $description = null;
 
     #[ORM\Column(length: 255)]
@@ -37,6 +37,9 @@ class Project
     // Propriété virtuelle non persistée (virtuelle car pas [ORM\Column......])
     // Juste propriété de l'objet "Project"
     private ?string $formattedDate = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $object = null;
 
     public function getId(): ?int
     {
@@ -134,6 +137,18 @@ class Project
     public function setFormattedDate(string $formattedDate): static
     {
         $this->formattedDate = $formattedDate;
+        return $this;
+    }
+
+    public function getObject(): ?string
+    {
+        return $this->object;
+    }
+
+    public function setObject(string $object): static
+    {
+        $this->object = $object;
+
         return $this;
     }
 }
