@@ -1,6 +1,9 @@
 import '../styles/index.scss';
 import '../styles/tailwing.css';
 
+// JS pour composants divers //
+import '../JS/components/icon.js';
+
 //JS pour menu burger
 import '../JS/includes/burger.js';
 

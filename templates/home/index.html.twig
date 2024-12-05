@@ -136,15 +136,6 @@
 	</div>
 
 	<div class="max-w-full bg-black" id="works">
-
-		{% for label, messages in app.flashes %}
-			{% for message in messages %}
-				<div class="alert__message-danger-project">
-					{{ message }}
-				</div>
-			{% endfor %}
-		{% endfor %}
-
 		<div class="max-w-full flex justify-center font-family">
 			<div class="w-9/12 max-lgMD:w-10/12">
 				<h2 class="text-white text-center text-50 p-2.5 pt-16 tracking-wider">Works</h2>
@@ -254,7 +245,7 @@
 
 						<div class="my-3 flex flex-col">
 							<p class="mr-2.5 text-white text-22 max-s:text-22 max-xs:text-18">Message :</p>
-							<textarea class="w-full h-48 my-2.5 p-1 resize-none outline-none" name="message" placeholder="Ecrriver votre message ici..." required></textarea>
+							<textarea class="w-full h-48 text-18 text-rose my-2.5 p-1 resize-none outline-none" name="message" placeholder="Ecriver votre message ici..." required></textarea>
 						</div>
 
 						<div class="relative flex justify-center m-3">

@@ -1,5 +1,13 @@
+.flashMessage {
+    display: flex;
+    justify-content: space-between;
+
+    &.active {
+        display: none;
+    }
+}
+
 .alert__message-danger,
-.alert__message-danger-project,
 .alert__message-success,
 .alert__message-warning {
     position: relative;
@@ -10,8 +18,7 @@
     color: white;
 }
 
-.alert__message-danger,
-.alert__message-danger-project {
+.alert__message-danger {
     background-color: rgba(255, 0, 0, 0.6);
 }
 

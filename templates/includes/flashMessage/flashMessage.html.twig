@@ -1,0 +1,12 @@
+{% for label, messages in app.flashes %}
+	{% for message in messages %}
+		<div class="flashMessage alert__message-{{ label }}" id="flashMessage">
+			<p>
+				{{ message }}
+			</p>
+			<p>
+				<img class="iconSmall cursor-pointer" src="{{ asset('images/icons/Close-256.ico')}}" alt="icone représentant une croix pour fermer l'onglet" id="icon">
+			</p>
+		</div>
+	{% endfor %}
+{% endfor %}
