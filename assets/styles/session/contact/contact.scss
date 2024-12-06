@@ -50,3 +50,22 @@
         }
     }
 }
+
+.contactInput {
+    outline: none;
+    width: 100%;
+    border-bottom: 2px solid white;
+    background-color: transparent;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.contactTextarea {
+    resize: none;
+
+    &:focus {
+        outline: none;
+    }
+}

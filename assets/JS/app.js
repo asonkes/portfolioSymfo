@@ -21,3 +21,8 @@ import './components/works/readMore.js';
 
 // JS pour animation (session "contact")
 import '../JS/components/contact/mouseEffect.js';
+
+// JS pour forcer à remonter en haut de la page en chargement //
+document.addEventListener('DOMContentLoaded', function () {
+    window.scrollTo(0, 0);  // Remonte en haut de la page
+});
