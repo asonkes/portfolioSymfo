@@ -30,7 +30,7 @@ class ProjectFixtures extends Fixture
                 'site_link' => 'https://jacadi.audrey-sonkes.be/',
                 'figma_link' => 'https://www.figma.com/design/w6XUCOSEukmwK0zdTs9kYm/Jacadi?node-id=0-1&node-type=canvas&t=CI1ssSLkar2WXsiG-0',
                 'git_link' => 'https://github.com/asonkes/Jacadi',
-                'description' => "Site e-commerce en Symfony dédié à la la vente de vêtements pour bébés (de 3 à 36mois) et pour enfants (de 2 à 14ans).\n
+                'description' => "Site e-commerce en Symfony dédié à la vente de vêtements pour bébés (de 3 à 36mois) et pour enfants (de 2 à 14ans).\n
                 La possibilité pour les utilisateurs de 'liker' différents produits n'est pas fonctionnelle, et le paiement en ligne n'est pas possible.\n
                 De plus, la fluidité de navigation pour le consommateur me semble moins fluide.\n
                 Tous les éléments manquants et les améliorations seront intégrés dans le projet de mon TEI. \n
@@ -54,10 +54,11 @@ class ProjectFixtures extends Fixture
                 'site_link' => 'https://garage.audrey-sonkes.be/',
                 'figma_link' => '',
                 'git_link' => 'https://github.com/asonkes/garage',
-                'description' => "Mon 1er projet e-commerce en Symfony, base de données est inexistante et l'appel aux images se fait via une URL.\n
+                'description' => "Mon 1er projet e-commerce en Symfony, base de données est existante mais l'intégration des images se fait essentiellement par URL.\n
                 Il est possible de modifier les annonces en modifiant les URL.\n
                 La fonctionnalité de connexion et de déconnexion fonctionnent.\n
-                Et l'admin est reconnu lors de la connexion pour pouvoir modifier les annonces",
+                Et l'admin est reconnu lors de la connexion pour pouvoir modifier les annonces.\n
+                La conception de la maquette a été fournie par notre professeur, et j'ai réalisé sa mise en œuvre en HTML et CSS.",
                 'image' => 'garage.webp',
                 'created_at' => '2023-12-03 17:27:44'
             ],
@@ -67,7 +68,8 @@ class ProjectFixtures extends Fixture
                 'site_link' => 'https://lollypop.audrey-sonkes.be/',
                 'figma_link' => 'https://www.figma.com/design/MlXQKciGyBfEEL6uZAZzW8/Projet-examen-(version-ordinateur)?node-id=0-1&node-type=canvas&t=EYSRmEPJ2eJ5zgo4-0',
                 'git_link' => 'https://github.com/asonkes/projet-fin-d-annee-2023',
-                'description' => "Projet de fin d'année 2023 entièrement réalisé en HTML et CSS.",
+                'description' => "Projet de fin d'année 2023 entièrement réalisé en HTML et CSS.\n
+                La conception de la mise en page a été entièrement imaginé par mes soins.",
                 'image' => 'lollyPop.webp',
                 'created_at' => '2023-06-26 18:25:19'
             ],
@@ -77,7 +79,8 @@ class ProjectFixtures extends Fixture
                 'site_link' => 'https://50nuancesdegrey.audrey-sonkes.be/',
                 'figma_link' => '',
                 'git_link' => 'https://github.com/asonkes/50NuancesDeGrey',
-                'description' => 'Exercice réalisé entièrement en HTML et CSS',
+                'description' => 'Exercice réalisé entièrement en HTML et CSS.\n
+                La conception de la mise en page a été entièrement imaginé par mes soins.',
                 'image' => '50NuancesDeGrey.webp',
                 'created_at' => '2022-12-26 17:30:18'
             ],

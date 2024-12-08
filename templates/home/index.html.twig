@@ -184,7 +184,7 @@
 												<p class="readMore underline underline-offset-4 decoration-2 cursor-pointer">En savoir plus :</p>
 
 												<div class="modal hidden my-3">
-													<p class="modalText typingEffect text-white text-18 rounded-2xl leading-5">
+													<p class="modalText typingEffect text-white text-18 rounded-2xl leading-5 tracking-wide">
 														{{project.description | nl2br}}
 													</p>
 												</div>
@@ -223,9 +223,13 @@
 				<div class="max-w-full h-full flex justify-center items-center">
 
 					<div class="w-5/6 flex flex-col">
-						<div>
-							<h3 class="my-5 text-rose text-center text-35">Me contacter</h3>
+						<div class="w-full my-3 flex">
+							<div class="w-32 text-white text-22 max-s:text-22 max-xs:text-18"></div>
+							<div class="w-full text-18 text-rose max-sBIG:text-16">
+								<h3 class="my-5 text-rose text-center text-35">Me contacter</h3>
+							</div>
 						</div>
+
 						{{ form_errors(contactForm) }}
 						{{ form_start(contactForm) }}
 
@@ -262,8 +266,13 @@
 							</div>
 						</div>
 
-						<div class="flex justify-center my-5">
-							<button type="submit" class="text-20 text-white p-3 border-2 border-white rounded-2xl">Envoyer</button>
+						<div class="w-full my-4 flex">
+							<div class="w-32 text-white text-22 max-s:text-22 max-xs:text-18"></div>
+							<div class="w-full text-18 text-rose max-sBIG:text-16">
+								<div class="flex justify-center my-5">
+									<button type="submit" class="buttonLink--medium text-22 text-white p-3 border-2 border-white rounded-2xl">Envoyer</button>
+								</div>
+							</div>
 						</div>
 						{{ form_end(contactForm) }}
 					</div>

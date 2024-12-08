@@ -50,5 +50,7 @@ document.addEventListener(('DOMContentLoaded'), () => {
 
     window.addEventListener('scroll', progressBar);
 
-    progressBar();
+    if(about) {
+        progressBar();
+    }
 })
