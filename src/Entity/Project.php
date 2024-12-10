@@ -41,6 +41,9 @@ class Project
     #[ORM\Column(length: 255)]
     private ?string $object = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $code = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -148,6 +151,18 @@ class Project
     public function setObject(string $object): static
     {
         $this->object = $object;
+
+        return $this;
+    }
+
+    public function getCode(): ?string
+    {
+        return $this->code;
+    }
+
+    public function setCode(string $code): static
+    {
+        $this->code = $code;
 
         return $this;
     }

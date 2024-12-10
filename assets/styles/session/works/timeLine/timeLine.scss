@@ -190,3 +190,24 @@
         }
     }
 }
+
+.projectContainer {
+
+    &--image2 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        opacity: 0;
+
+        &:hover {
+            background-image: url('../../../../../public/images/background/flux-conception-code-binaire_53876-97406.webp');
+            background-size: cover;
+            background-repeat: no-repeat;
+            opacity: 1;
+            animation-delay: 3s;
+            animation-iteration-count: 2;
+        }
+    }
+}

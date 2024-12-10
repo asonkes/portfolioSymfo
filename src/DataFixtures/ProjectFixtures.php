@@ -23,6 +23,7 @@ class ProjectFixtures extends Fixture
                 La maquette de ce projet a été réalisée entièrement par mes soins.",
                 'image' => 'fermeDeWarelles.webp',
                 'created_at' => '2024-11-04 18:17:53',
+                'code' => 'PHP - SCSS - Twig - JS'
             ],
             [
                 'object' => "Projet fin d'étude",
@@ -37,6 +38,7 @@ class ProjectFixtures extends Fixture
                 La maquette de ce projet a été réalisée entièrement par mes soins.",
                 'image' => 'jacadi.webp',
                 'created_at' => '2024-06-26 18:21:20',
+                'code' => 'PHP - SCSS - Twig - JS'
             ],
             [
                 'object' => "WordPress Examen",
@@ -47,6 +49,7 @@ class ProjectFixtures extends Fixture
                 'description' => "Réalisation d'un projet en utilisant WordPress comme base.",
                 'image' => 'gossipCop.webp',
                 'created_at' => '2024-02-21 18:21:20',
+                'code' => 'HTML - CSS - PHP - JS'
             ],
             [
                 'object' => "1er Projet Symfony",
@@ -60,7 +63,8 @@ class ProjectFixtures extends Fixture
                 Et l'admin est reconnu lors de la connexion pour pouvoir modifier les annonces.\n
                 La conception de la maquette a été fournie par notre professeur, et j'ai réalisé sa mise en œuvre en HTML et CSS.",
                 'image' => 'garage.webp',
-                'created_at' => '2023-12-03 17:27:44'
+                'created_at' => '2023-12-03 17:27:44',
+                'code' => 'PHP - CSS - Twig - JS'
             ],
             [
                 'object' => "Projet Fin 1ère année",
@@ -71,7 +75,8 @@ class ProjectFixtures extends Fixture
                 'description' => "Projet de fin d'année 2023 entièrement réalisé en HTML et CSS.\n
                 La conception de la mise en page a été entièrement imaginé par mes soins.",
                 'image' => 'lollyPop.webp',
-                'created_at' => '2023-06-26 18:25:19'
+                'created_at' => '2023-06-26 18:25:19',
+                'code' => 'HTML - CSS'
             ],
             [
                 'object' => "Projet Cours (HTML / CSS)",
@@ -82,7 +87,8 @@ class ProjectFixtures extends Fixture
                 'description' => 'Exercice réalisé entièrement en HTML et CSS.\n
                 La conception de la mise en page a été entièrement imaginé par mes soins.',
                 'image' => '50NuancesDeGrey.webp',
-                'created_at' => '2022-12-26 17:30:18'
+                'created_at' => '2022-12-26 17:30:18',
+                'code' => 'HTML - CSS'
             ],
         ];
 
@@ -108,6 +114,7 @@ class ProjectFixtures extends Fixture
             $project->setDescription($data['description']);
             $project->setImage($data['image']);
             $project->setCreatedAt(new \DateTimeImmutable($data['created_at']));
+            $project->setCode($data['code']);
 
             $manager->persist($project);
         }
