@@ -18,7 +18,7 @@ class HomeController extends AbstractController
     public function index(EntityManagerInterface $em, Request $request, MailerInterface $mailer): Response
     {
         // Permet d'afficher tous les projets dans la "TimeLine"
-        $projects = $em->getRepository(Project::class)->findAll();
+        $projects = $em->getRepository(Project::class)->findBy([], ['created_at' => 'DESC']);
 
         // Création du formateur de date avec la locale française
         $formatter = new \IntlDateFormatter('fr_FR', \IntlDateFormatter::LONG, \IntlDateFormatter::NONE);

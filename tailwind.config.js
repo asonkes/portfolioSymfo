@@ -6,8 +6,8 @@ module.exports = {
     "./templates/includes/partials/header.html.twig",
     "./templates/includes/partials/footer.html.twig",
     "./templates/home/index.html.twig",
-    "./templates/registration/register.html.twig",
     "./templates/security/login.html.twig",
+    "./templates/admin/project/project.html.twig"
   ],
   theme: {
     fontFamily: {
@@ -36,6 +36,7 @@ module.exports = {
       indigoSpecial: 'rgba(100, 97, 242, 0.95)',
       orange: '#FFA500',
       rose: '#e796f7',
+      roseSpecial: 'rgba(231, 150, 247, 0.4)',
       red: '#FF0000',
       transparent: 'rgba(0, 0, 0, 0)',
       yellow: '#FFFF00',

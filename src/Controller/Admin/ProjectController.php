@@ -13,11 +13,11 @@ class ProjectController extends AbstractController
 {
 
     #[Route('index', name: 'index')]
-    public function index(Project $project, EntityManagerInterface $entityManager): Response
+    public function index(Project $project, EntityManagerInterface $em): Response
     {
         $project = new Project();
 
-        $project = $entityManager->getRepository(Project::class)->findAll();
+        $project = $em->getRepository(Project::class)->findBy([], ['created_at' => 'DESC']);
 
         return $this->render('admin/project/project.html.twig', [
             'project' => $project

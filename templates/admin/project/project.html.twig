@@ -5,50 +5,78 @@
 {% endblock %}
 
 {% block body %}
-	<div class="max-w-full h-full flex flex-col font-family bg-black border-4 border-indigo" id="admin">
+	<div class="max-w-full h-full flex flex-col font-family bg-black" id="admin">
 
-		<h2 class="text-white text-50 p-2.5 pt-16 tracking-wider border-4 border-red">Administration</h2>
+		<h2 class="text-white text-50 p-2.5 pt-16 tracking-wider">Administration</h2>
 
-		<div class="w-full h-full flex text-white border-4 border-red">
+		<div class="w-full h-full flex text-white border border-white">
 
-			<div class="w-full flex flex-col border-4 border-orange">
-				<p class="text-center text-22 text-rose border-4 border-red">Nom</p>
+			<div class="w-full flex flex-col border border-white">
+				<p class="p-1.5 text-center text-22 text-rose">Objet</p>
 				{% for project in project %}
-					<p class="border-4 border-red">{{ project.name }}</p>
+					<p class="w-full h-32 flex justify-center items-center border border-white">{{ project.object }}</p>
 				{% endfor %}
 			</div>
 
-			<div class="w-full flex flex-col border-4 border-orange">
-				<p class="border-4 border-red">Lien du site :</p>
+			<div class="w-full flex flex-col border border-white">
+				<p class="p-1.5 text-center text-22 text-rose">Nom</p>
 				{% for project in project %}
-					<p class="border-4 border-red">{{ project.siteLink }}</p>
+					<p class="w-full h-32 flex justify-center items-center border border-white bg-roseSpecial">{{ project.name }}</p>
 				{% endfor %}
 			</div>
 
-			<div class="w-full flex flex-col border-4 border-orange">
-				<p class="border-4 border-red">Lien vers figma :</p>
+			<div class="w-full flex flex-col border border-white">
+				<p class="p-1.5 text-center text-22 text-rose">Lien du site</p>
 				{% for project in project %}
-					<p class="border-4 border-red">{{ project.figmaLink }}</p>
+					<p class="w-full h-32 p-5 flex justify-center items-center border border-white">{{ project.siteLink }}</p>
 				{% endfor %}
 			</div>
 
-			<div class="w-full flex flex-col border-4 border-orange">
-				<p class="border-4 border-red">Lien vers git :</p>
+			<div class="w-full flex flex-col border border-white">
+				<p class="p-1.5 text-center text-22 text-rose border-border-white">Lien vers figma</p>
 				{% for project in project %}
-					<p class="border-4 border-red">{{ project.gitLink }}</p>
+					<p class="w-full h-32 p-5 flex justify-center items-center border border-white bg-roseSpecial">{{ project.figmaLink }}</p>
 				{% endfor %}
 			</div>
 
-			<div class="w-full flex flex-col border-4 border-orange">
-				<p class="border-4 border-red">Description :</p>
+			<div class="w-full flex flex-col border border-white">
+				<p class="p-1.5 text-center text-22 text-rose border border-white">Lien vers git</p>
 				{% for project in project %}
-					<p class="border-4 border-red">{{ project.description }}</p>
+					<p class="w-full h-32 p-5 flex justify-center items-center border border-white">{{ project.gitLink }}</p>
 				{% endfor %}
 			</div>
 
+			<div class="w-full flex flex-col border border-white">
+				<p class="p-1.5 text-center text-22 text-rose border border-white">Description</p>
+				{% for project in project %}
+					<p class="w-full h-32 p-2 overflow-y-scroll border border-white bg-roseSpecial">{{ project.description }}</p>
+				{% endfor %}
+			</div>
 
+			<div class="w-full flex flex-col border border-white">
+				<p class="p-1.5 text-center text-22 text-rose border border-white">Image</p>
+				{% for project in project %}
+					<div class="w-full h-32 flex items-center border border-white">
+						<img src="{{ asset('images/projets/' ~ project.image)}}" alt="image représentant la couverture du projet">
+					</div>
+				{% endfor %}
+			</div>
+
+			<div class="w-full flex flex-col border border-white">
+				<p class="p-1.5 text-center text-22 text-rose border border-white">Code</p>
+				{% for project in project %}
+					<p class="w-full h-32 flex justify-center items-center overflow-y-scroll border border-white bg-roseSpecial">{{ project.code }}</p>
+				{% endfor %}
+			</div>
+
+			<div class="w-full flex flex-col border border-white">
+				<p class="p-1.5 text-center text-22 text-rose border border-white">Ajouter un projet</p>
+			</div>
+
+			<div class="w-full flex flex-col border border-white">
+				<p class="p-1.5 text-center text-22 text-rose border border-white">Supprimer un projet</p>
+			</div>
 		</div>
-
 
 	</div>
 </div>{% endblock %}
