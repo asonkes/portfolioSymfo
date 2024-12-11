@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Admin
+{% endblock %}
+
+{% block body %}
+	<div class="max-w-full h-full flex flex-col font-family bg-black border-4 border-indigo" id="admin">
+
+		<h2 class="text-white text-50 p-2.5 pt-16 tracking-wider border-4 border-red">Administration</h2>
+
+		<div class="w-full h-full flex text-white border-4 border-red">
+
+			<div class="w-full flex flex-col border-4 border-orange">
+				<p class="text-center text-22 text-rose border-4 border-red">Nom</p>
+				{% for project in project %}
+					<p class="border-4 border-red">{{ project.name }}</p>
+				{% endfor %}
+			</div>
+
+			<div class="w-full flex flex-col border-4 border-orange">
+				<p class="border-4 border-red">Lien du site :</p>
+				{% for project in project %}
+					<p class="border-4 border-red">{{ project.siteLink }}</p>
+				{% endfor %}
+			</div>
+
+			<div class="w-full flex flex-col border-4 border-orange">
+				<p class="border-4 border-red">Lien vers figma :</p>
+				{% for project in project %}
+					<p class="border-4 border-red">{{ project.figmaLink }}</p>
+				{% endfor %}
+			</div>
+
+			<div class="w-full flex flex-col border-4 border-orange">
+				<p class="border-4 border-red">Lien vers git :</p>
+				{% for project in project %}
+					<p class="border-4 border-red">{{ project.gitLink }}</p>
+				{% endfor %}
+			</div>
+
+			<div class="w-full flex flex-col border-4 border-orange">
+				<p class="border-4 border-red">Description :</p>
+				{% for project in project %}
+					<p class="border-4 border-red">{{ project.description }}</p>
+				{% endfor %}
+			</div>
+
+
+		</div>
+
+
+	</div>
+</div>{% endblock %}

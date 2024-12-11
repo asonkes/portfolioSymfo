@@ -37,7 +37,7 @@
     #image1 {
         &.active {
             opacity: 0;
-            transition: opacity ease 1.5s;
+            transition: all 1s ease-in-out;
         }
     }
 
@@ -46,7 +46,7 @@
 
         &.active {
             opacity: 1;
-            transition: opacity ease 1.5s;
+            transition: all 1s ease-in-out;
         }
     }
 }

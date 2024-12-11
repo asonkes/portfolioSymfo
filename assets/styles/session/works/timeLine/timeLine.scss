@@ -206,8 +206,7 @@
             background-size: cover;
             background-repeat: no-repeat;
             opacity: 1;
-            animation-delay: 3s;
-            animation-iteration-count: 2;
+            transition: all 0.75s ease-in-out;
         }
     }
 }

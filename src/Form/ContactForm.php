@@ -18,25 +18,29 @@ class ContactForm extends AbstractType
                 'label' => 'Nom',
 
                 'attr' => [
-                    'class' => 'contactInput'
+                    'class' => 'contactInput',
+                    'placeholder' => 'Veuillez indiquer votre nom...'
                 ]
             ])
             ->add('lastname', TextType::class, [
                 'label' => 'Prénom',
                 'attr' => [
-                    'class' => 'contactInput'
+                    'class' => 'contactInput',
+                    'placeholder' => 'Veuillez indiquer votre prénom...'
                 ]
             ])
             ->add('email', EmailType::class, [
                 'label' => 'E-mail',
                 'attr' => [
-                    'class' => 'contactInput'
+                    'class' => 'contactInput',
+                    'placeholder' => 'Veuillez indiquez votre e-mail...'
                 ]
             ])
             ->add('message', TextareaType::class, [
                 'label' => 'Message',
                 'attr' => [
-                    'class' => 'contactInput contactTextarea'
+                    'class' => 'contactInput contactTextarea',
+                    'placeholder' => 'Veuillez indiquer votre message...'
                 ]
             ])
         ;

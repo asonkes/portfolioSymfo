@@ -1,5 +1,9 @@
 {% extends "base.html.twig" %}
 
+{% block title %}
+	Home
+{% endblock %}
+
 {% block body %}
 	<div class="relative max-w-full overflow-hidden font-family" id="session">
 		<div class="relative overflow-hidden snip1573 max-w-full flex" id="home">
@@ -14,7 +18,7 @@
 
 			<div id="triangle"></div>
 			<div id="triangleTwo">
-				<img class="triangleTwo--img" src="{{ asset('images/images/Polygon-1.png')}}" alt="Image représentant le visage de la web Développeuse">
+				<img class="triangleTwo--img" src="{{ asset('images/images/Polygon-1.webp')}}" alt="Image représentant le visage de la web Développeuse">
 			</div>
 		</div>
 
@@ -191,13 +195,17 @@
 												</div>
 											{% endif %}
 
-											<div class="flex flex-col text-20 text-indigo m-5">
-												<p class="readMore underline underline-offset-4 decoration-2 cursor-pointer">En savoir plus :</p>
+											<div class="flex flex-col text-20 m-5">
+												<p class="readMore text-indigo underline underline-offset-4 decoration-2 cursor-pointer hover:text-rose">En savoir plus :</p>
 
 												<div class="modal hidden my-3">
-													<p class="modalText typingEffect text-white text-18 rounded-2xl leading-5 tracking-wide">
-														{{project.description | nl2br}}
-													</p>
+													<div class="modalText text-white text-18 rounded-2xl tracking-wide">
+														{% for sentence in project.description|split('.') %}
+															{% if sentence|trim is not empty %}
+																<p class="mb-4">{{sentence|trim}}.</p>
+															{% endif %}
+														{% endfor %}
+													</div>
 												</div>
 											</div>
 										</div>
@@ -281,7 +289,7 @@
 							<div class="w-32 text-white text-22 max-s:text-22 max-xs:text-18"></div>
 							<div class="w-full text-18 text-rose max-sBIG:text-16">
 								<div class="flex justify-center my-5">
-									<button type="submit" class="buttonLink--medium text-22 text-white p-3 border-2 border-white rounded-2xl">Envoyer</button>
+									<button type="submit" class="buttonLink--medium text-22 text-white p-2 border-2 border-white rounded-2xl hover:text-rose">Envoyer</button>
 								</div>
 							</div>
 						</div>
