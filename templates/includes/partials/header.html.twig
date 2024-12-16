@@ -13,6 +13,11 @@
 			<li class="w-32 text-20 text-center tracking-widest hover:scale-110">
 				<a href="{{ path('home')}}#contact">Contact</a>
 			</li>
+			{% if is_granted('ROLE_ADMIN') %}
+				<li class="w-32 text-20 text-center tracking-widest hover:scale-110">
+					<a href="{{ path('admin_projects_index') }}">Administration</a>
+				</li>
+			{% endif %}
 		</ul>
 	</nav>
 </header>
@@ -35,6 +40,11 @@
 			<li class="h-28 text-22">
 				<a class="w-full h-full block flex justify-center items-center hover:scale-110" href="{{ path('home')}}#contact">Contact</a>
 			</li>
+			{% if is_granted('ROLE_ADMIN') %}
+				<li class="h-28 text-22">
+					<a class="w-full h-full block flex justify-center items-center hover:scale-110" href="{{ path('admin_projects_index')}}">Administration</a>
+				</li>
+			{% endif %}
 		</ul>
 	</nav>
 </div>
