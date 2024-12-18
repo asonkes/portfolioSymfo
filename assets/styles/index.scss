@@ -1,6 +1,7 @@
 /* import du fichier de base de la css" */
 @use './base';
 @use '../../node_modules/normalize.css/normalize.css';
+@use '../../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
 
 /* import des fichiers avec css pour tout le site */
 @use './components/button/button.scss';
