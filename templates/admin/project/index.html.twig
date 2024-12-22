@@ -56,7 +56,7 @@
 			<div class="w-full flex flex-col border border-white">
 				<p class="p-1.5 text-center text-22 text-rose border border-white">Image</p>
 				{% for project in project %}
-					<div class="w-full h-32 flex items-center border border-white">
+					<div class="w-full h-32 flex items-center overflow-hidden border border-white">
 						<img src="{{ asset('images/projets/' ~ project.image)}}" alt="image représentant la couverture du projet">
 					</div>
 				{% endfor %}
@@ -71,6 +71,16 @@
 
 			<div class="w-full flex flex-col border border-white">
 				<p class="p-1.5 text-center text-22 text-rose border border-white">Autres actions</p>
+				{% for project in project %}
+					<div class="w-full h-32 border border-white">
+						<div class="flex justify-center">
+							<a class="buttonLink--small text-18 text-black text-center p-1.5 my-3 rounded-2xl hover:scale-105 bg-yellow" href="{{ path('admin_projects_edit', {'id': project.id})}}">Modifier</a>
+						</div>
+						<div class="flex justify-center">
+							<a class="buttonLink--small text-18 text-black text-center p-1.5 rounded-2xl hover:scale-105 bg-red" href="{{ path('admin_projects_delete', {'id': project.id})}}">Supprimer</a>
+						</div>
+					</div>
+				{% endfor %}
 			</div>
 		</div>
 

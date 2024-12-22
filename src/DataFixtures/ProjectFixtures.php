@@ -98,19 +98,8 @@ class ProjectFixtures extends Fixture
             $project->setObject($data['object']);
             $project->setName($data['name']);
             $project->setSiteLink($data['site_link']);
-
-            if ($data['figma_link'] !== 'null') {
-                $project->setFigmaLink($data['figma_link']);
-            } else {
-                $project->setFigmaLink('');
-            }
-
-            if ($data['git_link'] !== 'null') {
-                $project->setGitLink($data['git_link']);
-            } else {
-                $project->setGitLink('');
-            }
-
+            $project->setFigmaLink($data['figma_link'] ?: null);
+            $project->setGitLink($data['git_link' ?: null]);
             $project->setDescription($data['description']);
             $project->setImage($data['image']);
             $project->setCreatedAt(new \DateTimeImmutable($data['created_at']));

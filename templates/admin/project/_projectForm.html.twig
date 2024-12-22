@@ -1,0 +1,97 @@
+<div class="w-2/6 p-5 flex flex-col items-center border border-white">
+	<div class="w-full my-3 flex">
+		<div class="w-32 text-white text-22 max-s:text-22 max-xs:text-18"></div>
+		<div class="w-full text-18 text-rose max-sBIG:text-16">
+			<h3 class="my-5 text-rose text-center text-35">{{ name_label | default('Ajouter un produit') }}</h3>
+		</div>
+	</div>
+
+	<div class="text-red">
+		{{ form_errors(projectForm) }}
+	</div>
+
+	{{ form_start(projectForm) }}
+
+	<div class="w-full my-3 flex">
+		<div class="w-32 text-white text-22 max-s:text-22 max-xs:text-18">
+			{{ form_label(projectForm.name)}}
+		</div>
+		<div class="w-full text-18 text-rose max-sBIG:text-16">
+			{{ form_widget(projectForm.name)}}
+		</div>
+	</div>
+	<div class="w-full my-3 flex">
+		<div class="w-32 text-white text-22 max-s:text-22 max-xs:text-18">
+			{{ form_label(projectForm.siteLink)}}
+		</div>
+		<div class="w-full text-18 text-rose max-sBIG:text-16">
+			{{ form_widget(projectForm.siteLink)}}
+		</div>
+	</div>
+	<div class="w-full my-3 flex">
+		<div class="w-32 text-white text-22 max-s:text-22 max-xs:text-18">
+			{{ form_label(projectForm.figmaLink)}}
+		</div>
+		<div class="w-full text-18 text-rose max-sBIG:text-16">
+			{{ form_widget(projectForm.figmaLink)}}
+		</div>
+	</div>
+	<div class="w-full my-3 flex">
+		<div class="w-32 text-white text-22 max-s:text-22 max-xs:text-18">
+			{{ form_label(projectForm.gitLink)}}
+		</div>
+		<div class="w-full text-18 text-rose max-sBIG:text-16">
+			{{ form_widget(projectForm.gitLink)}}
+		</div>
+	</div>
+	<div class="w-full my-3 flex">
+		<div class="w-32 text-white text-22 max-s:text-22 max-xs:text-18">
+			{{ form_label(projectForm.description)}}
+		</div>
+		<div class="w-full text-18 text-rose max-sBIG:text-16">
+			{{ form_widget(projectForm.description)}}
+		</div>
+	</div>
+	<div class="w-full my-3 flex">
+		<div class="w-32 text-white text-22 max-s:text-22 max-xs:text-18">
+			{{ form_label(projectForm.image)}}
+		</div>
+		<div class="w-full text-18 text-rose max-sBIG:text-16">
+			{{ form_widget(projectForm.image)}}
+		</div>
+	</div>
+	<div class="w-full my-3 flex">
+		<div class="w-32 text-white text-22 max-s:text-22 max-xs:text-18">
+			{{ form_label(projectForm.created_at)}}
+		</div>
+		<div class="w-full text-18 text-rose max-sBIG:text-16">
+			{{ form_widget(projectForm.created_at)}}
+		</div>
+	</div>
+	<div class="w-full my-3 flex">
+		<div class="w-32 text-white text-22 max-s:text-22 max-xs:text-18">
+			{{ form_label(projectForm.object)}}
+		</div>
+		<div class="w-full text-18 text-rose max-sBIG:text-16">
+			{{ form_widget(projectForm.object)}}
+		</div>
+	</div>
+	<div class="w-full my-3 flex">
+		<div class="w-32 text-white text-22 max-s:text-22 max-xs:text-18">
+			{{ form_label(projectForm.code)}}
+		</div>
+		<div class="w-full text-18 text-rose max-sBIG:text-16">
+			{{ form_widget(projectForm.code)}}
+		</div>
+	</div>
+
+	<div class="w-full my-4 flex">
+		<div class="w-32 text-white text-22 max-s:text-22 max-xs:text-18"></div>
+		<div class="w-full text-18 text-rose max-sBIG:text-16">
+			<div class="flex justify-center my-5">
+				<button type="submit" class="buttonLink--medium text-22 text-white p-2 border-2 border-white rounded-2xl hover:text-rose">{{ button_label | default('Ajouter') }}</button>
+			</div>
+		</div>
+	</div>
+	{{ form_end(projectForm) }}
+</div>

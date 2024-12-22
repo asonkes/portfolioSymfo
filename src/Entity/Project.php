@@ -19,10 +19,10 @@ class Project
     #[ORM\Column(length: 255)]
     private ?string $siteLink = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 255, nullable: true)]
     private ?string $figmaLink = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 255, nullable: true)]
     private ?string $gitLink = null;
 
     #[ORM\Column(length: 700)]
@@ -76,7 +76,7 @@ class Project
         return $this->figmaLink;
     }
 
-    public function setFigmaLink(string $figmaLink): static
+    public function setFigmaLink(?string $figmaLink): static
     {
         $this->figmaLink = $figmaLink;
         return $this;
@@ -87,7 +87,7 @@ class Project
         return $this->gitLink;
     }
 
-    public function setGitLink(string $gitLink): static
+    public function setGitLink(?string $gitLink): static
     {
         $this->gitLink = $gitLink;
         return $this;
