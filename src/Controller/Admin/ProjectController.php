@@ -48,11 +48,11 @@ class ProjectController extends AbstractController
             // On définit le dossier de destination où l'image sera stockée (projets)
             $folder = 'projets';
 
-            // On appelle le service d'ajout pour sauvegarder l'image
+            // On appelle le service "PictureService" d'ajout pour l'ajout de l'image
             $fichier = $pictureService->add($image, $folder);
 
-            // Sauvegarder le fichier (ajouter ce nom de fichier à l'objet project)
-            $project->setImage($fichier);  // Assurez-vous que l'entité Project a un champ pour l'image
+            // On sauvegarde l'image et son nom est stockée dans la base de données
+            $project->setImage($fichier);
 
             // Sauvegarder l'entité en base de données
             $em->persist($project);
