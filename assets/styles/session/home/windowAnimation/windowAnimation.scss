@@ -25,10 +25,18 @@
 
   &:before {
     transform: skew(45deg) translateX(-155%);
+
+    @include mixins.lg-big {
+      display: none;
+    }
   }
 
   &:after {
     transform: skew(45deg) translateX(155%);
+
+    @include mixins.lg-big {
+      display: none;
+    }
   }
 
   &.active {
