@@ -2,14 +2,33 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="title" content="Portfolio d'Audrey">
+		<meta name="description" content="Portfolio d'une Web Developpeuse passionnée.">
+		<meta property="og:title" content="{% block og_title %}Portfolio{% endblock %}">
+		<meta property="og:type" content="website">
+
+		<meta property="og:image" content="{{ absolute_url(asset('images/logo/logo.png')) }}">
+		<meta property="og:image:width" content="573">
+		<meta property="og:image:height" content="573">
+
+		<meta property="og:url" content="https://audrey-sonkes.be/">
+		<meta property="og:description" content="Portfolio d'une Web Developpeuse passionnée.">
+		<meta property="og:locale" content="fr_FR">
+		<meta property="og:site_name" content="Portfolio d'Audrey">
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:title" content="Portfolio d'Audrey">
+		<meta name="twitter:description" content="Portfolio d'une Web Developpeuse passionnée.">
+
 		<title>
-			{% block title %}Portfolio
+			{% block title %}Home
 			{% endblock %}
 		</title>
-		<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
+
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="icon" type="image/png" href="{{ asset('images/logo/logo.png') }}">
 		<link href="https://fonts.googleapis.com/css2?family=Homenaje&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> {% block stylesheets %}{% endblock %}
 		{{ encore_entry_link_tags('app') }}
 

@@ -23,7 +23,7 @@
 		</div>
 
 		<div class="relative flex justify-center h-auto -top-40 max-md:-top-48 max-s:-top-64">
-			<div class="absolute inline-flex max-s:flex max-s:flex-col">
+			<div class="absolute inline-flex max-s:flex max-s:flex-col max-xsss: mt-10">
 				<span class="static-text text-60 text-rose tracking-wider max-md:text-55 max-s:text-50 max-s:text-center">I'm a</span>
 				<span class="text-indigo text-60 tracking-wider max-md:text-55 max-s:text-50" id="dynamic-text"></span>
 			</div>
@@ -59,10 +59,10 @@
 				</div>
 				<div class="w-6/12 max-lgBIG:w-full" id="about-right">
 					<div class="w-full h-full flex justify-center items-center">
-						<div class="w-72 flex flex-col justify-center p-3 m-5 text-white border border-white">
+						<div class="w-72 flex flex-col justify-center p-3 m-5">
 							<p class="text-xl p-3 text-center text-30 text-white py-5">Mes Compétences</p>
 							<div class="w-full p-1.5">
-								<p class="text-18">PHP</p>
+								<p class="text-white text-18">PHP</p>
 								<div class="w-full bg-indigo rounded-xl" style="--progress-width: 70%">
 									<div class="progressBar bg-rose text-end rounded-xl p-0.5">
 										<span class="progressLetter mr-2.5 tracking-wider text-transparent">70%</span>
@@ -71,7 +71,7 @@
 							</div>
 
 							<div class="w-full p-1.5">
-								<p class="text-18">Symfony</p>
+								<p class="text-white text-18">Symfony</p>
 								<div class="w-full bg-indigo rounded-xl" style="--progress-width: 70%">
 									<div class="progressBar bg-rose text-end rounded-xl p-0.5">
 										<span class="progressLetter mr-2.5 tracking-wider text-transparent">70%</span>
@@ -80,7 +80,7 @@
 							</div>
 
 							<div class="w-full p-1.5">
-								<p class="text-18">Javascript</p>
+								<p class="text-white text-18">Javascript</p>
 								<div class="w-full bg-indigo rounded-xl" style="--progress-width: 60%">
 									<div class="progressBar bg-rose text-end rounded-xl p-0.5">
 										<span class="progressLetter mr-2.5 tracking-wider text-transparent">60%</span>
@@ -89,7 +89,7 @@
 							</div>
 
 							<div class="w-full p-1.5">
-								<p class="text-18">HTML / CSS</p>
+								<p class="text-white text-18">HTML / CSS</p>
 								<div class="w-full bg-indigo rounded-xl" style="--progress-width: 90%">
 									<div class="progressBar bg-rose text-end rounded-xl p-0.5">
 										<span class="progressLetter mr-2.5 tracking-wider text-transparent">90%</span>
@@ -98,7 +98,7 @@
 							</div>
 
 							<div class="w-full p-1.5">
-								<p class="text-18">Tailwind</p>
+								<p class="text-white text-18">Tailwind</p>
 								<div class="w-full bg-indigo rounded-xl" style="--progress-width: 80%">
 									<div class="progressBar bg-rose text-end rounded-xl p-0.5">
 										<span class="progressLetter mr-2.5 tracking-wider text-transparent">80%</span>
@@ -107,7 +107,7 @@
 							</div>
 
 							<div class="w-full p-1.5">
-								<p class="text-18">SASS</p>
+								<p class="text-white text-18">SASS</p>
 								<div class="w-full bg-indigo rounded-xl" style="--progress-width:80%">
 									<div class="progressBar bg-rose text-end rounded-xl p-0.5">
 										<span class="progressLetter mr-2.5 tracking-wider text-transparent">80%</span>
@@ -116,7 +116,7 @@
 							</div>
 
 							<div class="w-full p-1.5">
-								<p class="text-18">MYSQL</p>
+								<p class="text-white text-18">MYSQL</p>
 								<div class="w-full bg-indigo rounded-xl" style="--progress-width: 80%">
 									<div class="progressBar bg-rose text-end rounded-xl p-0.5">
 										<span class="progressLetter mr-2.5 tracking-wider text-transparent">80%</span>
@@ -125,7 +125,7 @@
 							</div>
 
 							<div class="w-full p-1.5">
-								<p class="text-18">FIGMA</p>
+								<p class="text-white text-18">FIGMA</p>
 								<div class="w-full bg-indigo rounded-xl" style="--progress-width: 80%">
 									<div class="progressBar bg-rose text-end rounded-xl p-0.5">
 										<span class="progressLetter mr-2.5 tracking-wider text-transparent">80%</span>
@@ -134,7 +134,7 @@
 							</div>
 
 							<div class="w-full p-1.5">
-								<p class="text-18">WordPress</p>
+								<p class="text-18 text-white">WordPress</p>
 								<div class="w-full bg-indigo rounded-xl" style="--progress-width: 70%">
 									<div class="progressBar bg-rose text-end rounded-xl p-0.5">
 										<span class="progressLetter mr-2.5 tracking-wider text-transparent">70%</span>
@@ -150,7 +150,7 @@
 
 	<div class="max-w-full bg-black" id="works">
 		<div class="max-w-full flex justify-center font-family">
-			<div class="w-9/12 max-lgMD:w-10/12">
+			<div class="w-9/12 max-lgMD:w-10/12 max-s:w-full">
 				<h2 class="text-white text-center text-50 p-2.5 pt-16 tracking-wider">Works</h2>
 
 				<div class="w-full flex grow justify-center pt-20 overflow-hidden">
@@ -167,10 +167,10 @@
 
 											<p class="text-center text-22 text-white my-3">{{project.name}}</p>
 
-											<div class="projectContainer relative w-full h-40 flex flex-col justify-center">
+											<div class="projectContainer relative w-full h-56 flex flex-col justify-center">
 												<img class="projectContainer--image object-cover w-full h-full" src="{{ asset('images/projets/' ~ project.image)}}" alt="Image représentant la couverture du projet">
 
-												<div class="projectContainer--image2 w-full h-full flex grow items-center">
+												<div class="projectContainer--image2 w-full h-60 flex grow items-center">
 													<div class="w-full h-full flex flex-col justify-center">
 														<p class="my-2 text-18 text-center tracking-wider">
 															{{ project.code }}
@@ -224,7 +224,7 @@
 											</div>
 										</div>
 
-										<div class="circle absolute top-0 w-8 h-8 bg-fushia max-lgBIG:w-6 max-lgBIG:h-6 max-s:w-5 max-s:h-5"></div>
+										<div class="circle absolute top-0 w-8 h-8 bg-fushia max-lgBIG:w-6 max-lgBIG:h-6 max-s:w-5 max-s:h-5 max-xsBig:w-4.5 max-xsBig:h-4.5"></div>
 									</li>
 								{% endfor %}
 							</ul>
@@ -252,13 +252,12 @@
 				</div>
 			</div>
 
-			<div class="w-2/4 h-screen max-lgBIG:w-full">
+			<div class="w-2/4 h-full max-lgBIG:w-full">
 				<div class="max-w-full h-full flex justify-center items-center">
 
 					<div class="w-5/6 flex flex-col">
-						<div class="w-full my-3 flex">
-							<div class="w-32 text-white text-22 max-s:text-22 max-xs:text-18"></div>
-							<div class="w-full text-18 text-rose max-sBIG:text-16">
+						<div class="w-full my-3">
+							<div class="w-full text-18 text-center text-rose max-sBIG:text-16">
 								<h3 class="my-5 text-rose text-center text-35">Me contacter</h3>
 							</div>
 						</div>
@@ -303,7 +302,7 @@
 						</div>
 
 						<div class="w-full my-4 flex">
-							<div class="w-32 text-white text-22 max-s:text-22 max-xs:text-18"></div>
+
 							<div class="w-full text-18 text-rose max-sBIG:text-16">
 								<div class="flex justify-center my-5">
 									<button type="submit" class="buttonLink--medium text-22 text-white p-2 border-2 border-white rounded-2xl hover:text-rose">Envoyer</button>

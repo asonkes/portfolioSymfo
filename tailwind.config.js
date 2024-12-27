@@ -54,9 +54,11 @@ module.exports = {
       'max-sBIG': {'max': '450px'},
       'max-xs': {'max': '400px'},
       'max-xsBIG': {'max': '350px'},
+      'max-xsss': {'max': '280px'},
     },
     extend: {
       width: {
+        '4.5': '18px',
         '40': '40%',
         '55': '55%',
         '60': '60%',
@@ -66,6 +68,7 @@ module.exports = {
         '90': '90%',
       },
       height: {
+        '4.5': '18px',
         '90': '90%',
       },
       margin: {
