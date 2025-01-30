@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
     const icon = document.getElementById('icon');
-    console.log('icon', icon);
 
     if(icon) {
         icon.addEventListener('click', () => {

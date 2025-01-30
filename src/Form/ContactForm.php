@@ -86,7 +86,7 @@ class ContactForm extends AbstractType
                     ]),
                     new Length([
                         'min' => 10,
-                        'minMessage' => 'Votre message doit comporter au moins {{ limit }} caractères'
+                        'minMessage' => 'Votre message doit comporter au moins {{ limit }} caractères.'
                     ])
                 ]
             ])
@@ -95,8 +95,6 @@ class ContactForm extends AbstractType
 
     public function configureOptions(OptionsResolver $resolver): void
     {
-        $resolver->setDefaults([
-            // Configure your form options here
-        ]);
+        $resolver->setDefaults([]);
     }
 }

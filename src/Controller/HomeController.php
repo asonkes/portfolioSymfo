@@ -69,6 +69,12 @@ class HomeController extends AbstractController
             return $this->redirectToRoute('home');
         }
 
+        if ($contactForm->isSubmitted() && !$contactForm->isValid()) {
+
+            // Ajouter le message flash avant la redirection
+            $this->addFlash('danger', "Votre e-mail n'a pas été envoyé, des messages d'erreur sont peut-être apparus ! ");
+        }
+
         return $this->render('home/index.html.twig', [
             'projects' => $projects,
             'contactForm' => $contactForm

@@ -252,7 +252,7 @@
 				</div>
 			</div>
 
-			<div class="w-2/4 h-full max-lgBIG:w-full">
+			<div class="w-2/4 h-full max-lgBIG:w-full" id="contactForm">
 				<div class="max-w-full h-full flex justify-center items-center">
 
 					<div class="w-5/6 flex flex-col">
@@ -262,42 +262,59 @@
 							</div>
 						</div>
 
-						<div class="text-red">
-							{{ form_errors(contactForm) }}
-						</div>
-
+						<form action=""></form>
 						{{ form_start(contactForm) }}
 
 						<div class="w-full my-3 flex">
 							<div class="w-32 text-white text-22 max-s:text-22 max-xs:text-18">
 								{{ form_label(contactForm.firstname)}}
 							</div>
-							<div class="w-full text-18 text-rose max-sBIG:text-16">
-								{{ form_widget(contactForm.firstname)}}
+							<div class="w-full">
+								<div class="w-full text-18 text-rose max-sBIG:text-16">
+									{{ form_widget(contactForm.firstname)}}
+								</div>
+								<div class="w-full text-18 text-red max-sBIG:text-16 formError">
+									{{ form_errors(contactForm.firstname)}}
+								</div>
 							</div>
 						</div>
 						<div class="w-full my-3 flex">
 							<div class="w-32 text-white text-22 max-s:text-22 max-xs:text-18">
 								{{ form_label(contactForm.lastname)}}
 							</div>
-							<div class="w-full text-18 text-rose max-sBIG:text-16">
-								{{ form_widget(contactForm.lastname)}}
+							<div class="w-full">
+								<div class="w-full text-18 text-rose max-sBIG:text-16">
+									{{ form_widget(contactForm.lastname)}}
+								</div>
+								<div class="w-full text-18 text-red max-sBIG:text-16 formError">
+									{{ form_errors(contactForm.lastname)}}
+								</div>
 							</div>
 						</div>
 						<div class="w-full my-3 flex">
 							<div class="w-32 text-white text-22 max-s:text-22 max-xs:text-18">
 								{{ form_label(contactForm.email)}}
 							</div>
-							<div class="w-full text-18 text-rose max-sBIG:text-16">
-								{{ form_widget(contactForm.email)}}
+							<div class="w-full">
+								<div class="w-full text-18 text-rose max-sBIG:text-16">
+									{{ form_widget(contactForm.email)}}
+								</div>
+								<div class="w-full text-18 text-red max-sBIG:text-16 formError">
+									{{ form_errors(contactForm.email)}}
+								</div>
 							</div>
 						</div>
 						<div class="w-full my-3 flex">
 							<div class="w-32 text-white text-22 max-s:text-22 max-xs:text-18">
 								{{ form_label(contactForm.message)}}
 							</div>
-							<div class="w-full text-18 text-rose max-sBIG:text-16">
-								{{ form_widget(contactForm.message)}}
+							<div class="w-full">
+								<div class="w-full text-18 text-rose max-sBIG:text-16">
+									{{ form_widget(contactForm.message)}}
+								</div>
+								<div class="w-full text-18 text-red max-sBIG:text-16 formError">
+									{{ form_errors(contactForm.message)}}
+								</div>
 							</div>
 						</div>
 
@@ -311,7 +328,6 @@
 						</div>
 						{{ form_end(contactForm) }}
 					</div>
-
 				</div>
 			</div>
 		</div>
