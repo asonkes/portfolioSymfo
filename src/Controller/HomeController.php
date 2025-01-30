@@ -50,7 +50,7 @@ class HomeController extends AbstractController
             $message = $data['message'];
 
             $email = (new Email())
-                ->from($contactEmail)
+                ->from('contact@test.audrey-sonkes.be')
                 ->to('audrey.sonkes@gmail.com')
                 ->subject('Portfolio : nouveau message')
                 ->text(sprintf(
