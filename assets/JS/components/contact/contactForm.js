@@ -12,10 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Equivaut à hasErrors === true
-        if (hasErrors) {
-            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-        } else if (document.location.hash === '#contact') {
+        // On fait comme ça car on veut finalement que si le formulaire ets ok OU non, on soit redirigé vers la partie contact dans les 2 cas.
+        if (hasErrors || !hasErrors) {
+            document.getElementById('contact').scrollIntoView();
             history.replaceState({}, document.title, window.location.pathname);
         }
     }, 100);
