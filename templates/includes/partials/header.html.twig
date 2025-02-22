@@ -28,16 +28,16 @@
 			<div class="absolute block h-1 w-10 left-0 bg-black rounded-xl" id="burgerLine"></div>
 		</div>
 		<ul class="absolute w-full top-16 text-center bg-indigoSpecial" id="burgerUl">
-			<li class="burgerLi h-28 text-22 hover:scale-110">
+			<li class="burgerLi h-20 text-22 hover:scale-110">
 				<a class="link w-full h-full block flex justify-center items-center hover:scale-110" href="{{ path('home')}}">Accueil</a>
 			</li>
-			<li class="burgerLi h-28 text-22">
+			<li class="burgerLi h-20 text-22">
 				<a class="w-full h-full block flex justify-center items-center hover:scale-110" href="{{ path('home')}}#about">About</a>
 			</li>
-			<li class="burgerLi h-28 text-22">
+			<li class="burgerLi h-20 text-22">
 				<a class="w-full h-full block flex justify-center items-center hover:scale-110" href="{{ path('home')}}#works">Works</a>
 			</li>
-			<li class="burgerLi h-28 text-22">
+			<li class="burgerLi h-20 text-22">
 				<a class="w-full h-full block flex justify-center items-center hover:scale-110" href="{{ path('home')}}#contact">Contact</a>
 			</li>
 			{% if is_granted('ROLE_ADMIN') %}

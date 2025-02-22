@@ -1,21 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
-    setTimeout(() => {
-        const formErrors = document.querySelectorAll('.formError');
-        // Ici on met false, car on considère par défault qu'il n'y a pas d'erreur
-        let hasErrors = false;
+    const form = document.querySelector('form');
 
-        formErrors.forEach(error => {
-            // Si on enlève les espaces du contenu et que le texte n'est tout de même pas vide
-            // hasErrors = false (car cela veut dire qu'il y a du contenu, et donc des erreurs)
-            if (error.textContent.trim() !== '') {
-                hasErrors = true;
-            }
-        });
-        // Equivaut à hasErrors === true
-        if (hasErrors) {
-            document.getElementById('contact').scrollIntoView();
-        } else if (document.location.hash === '#contact') {
-            history.replaceState({}, document.title, window.location.pathname);
+    // Lors de la soumission du formulaire, on stocke l'état du formulaire
+    // pas besoin de mettre le nom du form (grâce à form_start)
+    form.addEventListener('submit', () => {
+        // On donne le nom de la clé(formSubmitted) et la valeur (true)
+        sessionStorage.setItem('formSubmitted', 'true');
+    })
+
+    setTimeout(() => {
+        // Vérification si le formulaire a été soumis 
+        // Utilisation de sessionStorage
+        const formSubmitted = sessionStorage.getItem('formSubmitted');
+
+         // Si le formulaire a été soumis et qu'il y a des erreurs ou non
+         if (formSubmitted === 'true') {
+            const contact = document.getElementById('contact');
+
+            // Si il y a des erreurs, ou pas, on défile vers la section contact
+            contact.scrollIntoView();
+
+            // On supprime l'élément 'formSubmitted' après utilisation
+            sessionStorage.removeItem('formSubmitted');
         }
     }, 100);
 });

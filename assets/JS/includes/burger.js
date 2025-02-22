@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     burgerLi.forEach((e) => {
         e.addEventListener('click', () => {
             burgerUl.classList.remove('active');
+            burgerLine.classList.remove('active');
         })
     })
 })
